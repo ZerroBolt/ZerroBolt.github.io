@@ -2,8 +2,7 @@ let form;
 
 function documentReady() {
     form = document.getElementById('my-contact-form');
-    // form.addEventListener('submit', formHandler);
-    document.getElementById("my-contact-form").addEventListener("submit", formHandler);
+    form.addEventListener('submit', formHandler);
 }
 
 window.addEventListener('scroll', () => {
@@ -100,31 +99,6 @@ function formHandler(event) {
     // const message = form.elements.message.value;
 
     // console.log(name + ": " + message);
-
-    const form = event.target;
-    const messageEl = document.getElementById("form-message");
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-        method: "POST",
-        body: formData,
-    })
-    .then(response => response.text().then(text => ({ status: response.status, text })))
-    .then(result => {
-        if (result.status === 200) {
-            messageEl.textContent = result.text;
-            messageEl.style.color = "green";
-            form.reset();
-        } else {
-            messageEl.textContent = result.text;
-            messageEl.style.color = "red";
-        }
-    })
-    .catch(error => {
-        messageEl.textContent = "There was an error submitting the form.";
-        messageEl.style.color = "red";
-        console.error("Error:", error);
-    });
 
     $('.send-button').text("Message Sent!");
 
