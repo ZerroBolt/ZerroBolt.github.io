@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Tycho Kerkhofs</title>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- <link rel="shortcut icon" href="imgs/favicon.ico"> -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body onload="documentReady()">
+
+    <!-- Navigation -->
+    <header id="main-header">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">// Home</a></li>
+                <li><a href="#about-me">// About me</a></li>
+                <li><a href="#experiences">// My Experiences</a></li>
+                <li><a href="#projects">// Projects</a></li>
+                <li><a href="#contact">// Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="secondaryNavbar">
+            <ul class="nav-links">
+                <li><a href="https://www.linkedin.com/in/tycho-k/"
+                        target="_blank"><code>&lt;!-- LinkedIn --&gt;</code></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="home-section">
+            <div class="home-content">
+                <h1>Tycho Kerkhofs</h1>
+                <p>Game design student & hobby photographer</p>
+            </div>
+        </section>
+
+        <!-- About me section -->
+        <section id="about-me" class="about-me-section">
+            <div class="about-me-content">
+                <div>
+                    <h3>// About me</h3>
+                    <h2>Who am I?</h2>
+                    <p>Hi there!</p>
+                    <p>You have found the portfolio of Tycho Kerkhofs. Currently, I am a first-year game design student
+                        at CMGT at Saxion in Enschede (the Netherlands). I am very passionate about Virtual Reality and
+                        its games. Eventually I would like to create Virtual Reality games and applications. In my free
+                        time I do a lot with photography. Most of the time I will post my photos to my Instagram
+                        profile.</p>
+                    <p>Before this study I already finished the MBO study Applicatie- & Mediaontwikkelaar at Summa
+                        College in Eindhoven (the Netherlands). Here I mainly worked with the languages C#, SQL, HTML,
+                        CSS and PHP. In the 3 years of this study, I also had 2 internships where I learned a lot about
+                        the professional IT industry.</p>
+                    <p>On my website you can find information about my projects, my resume, a way to contact me, and a
+                        way to go to my other socials.</p>
+                </div>
+                <aside class="about-me-picture">
+                    <img src="imgs/profile_picture.jpg" alt="my picture">
+                </aside>
+            </div>
+        </section>
+
+        <!-- Experiences section -->
+        <section id="experiences" class="experiences-section">
+            <h3>// My Experiences</h3>
+
+            <!-- Card -->
+            <div class="experiences-card">
+                <div class="card-title" onclick="experienceCardClicked(event)">
+                    <h2>Intern at Count-IT</h2>
+                    <p>Feb. 2021 - Jun. 2021</p>
+                </div>
+                <div class="card-content hidden">
+                    <div class="card-main">
+                        <div class="card-small-info">
+                            <p>Herkenbosch, NL</p>
+                            <p><a href="https://www.count-it.eu/en/home-en/" target="_blank">count-it.eu</a></p>
+                        </div>
+                        <p>
+                            My second internship I did was at Count-IT in Herkenbosch (the Netherlands). This company
+                            focusses on creating cash register systems. My task was to make a quick and easy to use
+                            debug functionality to the app, so that bugs were a lot easier to fix. I had to work in C#
+                            to make everything. I also had to connect the application to actual cash registers and
+                            ATM's. I learned a lot about C# and the professional IT industry in this internship.
+                        </p>
+                        <div class="card-tags">
+                            <p>C#</p>
+                            <p>POS System</p>
+                        </div>
+                    </div>
+                    <aside>
+                        <figure>
+                            <img src="imgs/experiences/count-it_logo.png" alt="Logo Count-IT">
+                        </figure>
+                    </aside>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="experiences-card">
+                <div class="card-title" onclick="experienceCardClicked(event)">
+                    <h2>Intern at Bonsai Media</h2>
+                    <p>Aug. 2019 - Feb. 2020</p>
+                </div>
+                <div class="card-content hidden">
+                    <div class="card-main">
+                        <div class="card-small-info">
+                            <p>Nederweert, NL</p>
+                            <p><a href="https://www.bonsaimedia.nl/" target="_blank">bonsaimedia.nl</a></p>
+                        </div>
+                        <p>
+                            My first internship I ever did was at Bonsai Media in Nederweert (the Nederlands). I mainly
+                            worked with WordPress, and I often needed to change the styling in CSS.
+                        </p>
+                        <div class="card-tags">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>WordPress</p>
+                        </div>
+                    </div>
+                    <aside>
+                        <figure>
+                            <img src="imgs/experiences/bonsai-media_logo.png" alt="Logo Bonsai Media">
+                        </figure>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <h3>// Projects</h3>
+
+            <!-- TEMPLATE PROJECT CARD -->
+            <template>
+                <div class="project-item">
+                    <div class="project-thumbnail" onclick="projectCardClicked(event)" data-template="template-...">
+                        <img src="imgs/projects/...">
+                        <h3>Title...</h3>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Project Row 1 -->
+            <div class="project-row">
+                <!-- HORROR TRAILER - SOUND DESIGN -->
+                <div class="project-item">
+                    <div class="project-thumbnail" onclick="projectCardClicked(event)" data-template="template-sound">
+                        <img src="imgs/projects/sound-design-trailer.jpg" alt="Thumbnail Sound Design Horror Trailer">
+                        <h3>Sound Design Horror Trailer</h3>
+                    </div>
+                </div>
+
+                <!-- MYANIMELIST REDESIGN UI/UX -->
+                <div class="project-item">
+                    <div class="project-thumbnail" onclick="projectCardClicked(event)" data-template="template-mal">
+                        <img src="imgs/projects/mal_redesign.png" alt="Thumbnail MyAnimeList redesign assignment">
+                        <h3>Redesign Of The MyAnimeList Website</h3>
+                    </div>
+                </div>
+
+                <!-- MOVIE POSTER IMAGERY -->
+                <div class="project-item">
+                    <div class="project-thumbnail" onclick="projectCardClicked(event)" data-template="template-poster">
+                        <img src="imgs/projects/thumbnail_tycho_kerkhofs_poster.png"
+                            alt="Thumbnail Movie Poster Assignment">
+                        <h3>Movie Poster Assignment</h3>
+                    </div>
+                </div>
+
+                <!-- Shared project info block -->
+                <div class="project-info hidden"></div>
+            </div>
+
+
+            <!-- Project Row 2 -->
+            <div class="project-row">
+                <!-- GAME HUD REDESIGN UI/UX -->
+                <div class="project-item">
+                    <div class="project-thumbnail" onclick="projectCardClicked(event)"
+                        data-template="template-hud-design">
+                        <img src="imgs/projects/hud_gamedesign.png">
+                        <h3>HUD Design Game</h3>
+                    </div>
+                </div>
+
+                <!-- 3D MODEL TREEHOUSE -->
+                <div class="project-item">
+                    <div class="project-thumbnail" onclick="projectCardClicked(event)"
+                        data-template="template-treehouse">
+                        <img src="imgs/projects/treehouse.png" alt="Thumbnail 3D model assignment">
+                        <h3>3D Model Of A Tree House</h3>
+                    </div>
+                </div>
+
+                <!-- Shared project info block -->
+                <div class="project-info hidden"></div>
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div>
+                <h3>// Contact</h3>
+                <ul class="contact-links">
+                    <li><a href="https://www.linkedin.com/in/tycho-k/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/tychokerkhofs/" target="_blank">Instagram</a></li>
+                    <li><a href="https://github.com/ZerroBolt" target="_blank">Github</a></li>
+                </ul>
+            </div>
+            <aside>
+                <form id="my-contact-form" class="contact-form" action="php/send_form.php" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <input type="text" name="subject" placeholder="Subject" />
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="send-button">Send</button>
+                </form>
+
+                <p id="form-message" class="form-message" style="margin-top: 20px;"></p>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2025 Tycho Kerkhofs. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Templates -->
+
+    <!-- Template Project content -->
+    <template id="template-...">
+        <div class="project-info-title">
+            <h2>Title</h2>
+            <div class="card-tags">
+                <p>...</p>
+                <p>...</p>
+            </div>
+        </div>
+        <div class="project-info-content">
+            <p>Portfolio item information...</p>
+        </div>
+    </template>
+
+    <!-- TEMPLATE SOUND -->
+    <template id="template-sound">
+        <div class="project-info-title">
+            <h2>Sound Design Horror Trailer</h2>
+            <div class="card-tags">
+                <p>Ableton</p>
+                <p>Sound Design</p>
+            </div>
+        </div>
+        <div class="project-info-content">
+            <p>For my first Personal Portfolio assignment / item I wanted to learn more about sound
+                design. In the first year of my study I unfortunately couldn't follow the subject Sound
+                Design because back then I had the role of Engineer who didn't need to follow that
+                subject. Now that I am a Designer I thought it would be useful to at least know
+                something about Sound Design.</p>
+            <p>I basically followed all the lessons and steps of the actual sound design classes and
+                remade the sounds for a trailer. The original trailer is about 2 minutes long, but my
+                personal goal for Personal Portfolio was to remake the sound of a video of max 1 and a
+                half minutes long. So I only remade those sounds. If I had a bit more time I would have
+                done the full video.</p>
+            <p>I used Ableton to record and edit all the sounds for the trailer. In the last couple of
+                weeks I learned a lot about sound design, what it means to have a decent setup to create
+                realistic sounds and how to use Ableton and its sound effects.</p>
+            <p>
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/1030307433?h=14efa06d58" width="640"
+                    height="360" frameborder="0" allowfullscreen>
+                </iframe>
+            </p>
+        </div>
+    </template>
+
+    <!-- TEMPLATE MAL -->
+    <template id="template-mal">
+        <div class="project-info-title">
+            <h2>MyAnimeList Redesign</h2>
+            <div class="card-tags">
+                <p>UI/UX</p>
+                <p>Website Redesign</p>
+            </div>
+        </div>
+        <div class="project-info-content">
+            <p>For the Subject “UI/UX Design” I had to redesign 2 pages of a already existing website. I chose
+                MyAnimeList to
+                redesign. The images below show my design.</p>
+            <p>I chose to redesign the home page and one of the settings pages. The style in my design is a lot more
+                unified than in
+                the original design and it is also more visually appealing.</p>
+            <p>
+                <a href="https://www.figma.com/proto/0yXPjFRkwFlrjSDm1sSssN/MAL-Redesign---UI%2FUX?node-id=9-2&t=3tRXW3JEhskM0LJm-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=9%3A2"
+                    target="_blank">Go to Figma to see the full interactive design</a>
+            </p>
+            <div class="project-info-gallery">
+                <img src="imgs/projects/mal-homepage.png" alt="Redesign MyAnimeList Homepage">
+                <img src="imgs/projects/mal-settingspage.png" alt="Redesign MyAnimeList Settingspage">
+            </div>
+        </div>
+    </template>
+
+    <!-- TEMPLATE POSTER -->
+    <template id="template-poster">
+        <div class="project-info-title">
+            <h2>Movie Poster</h2>
+            <div class="card-tags">
+                <p>Photoshop</p>
+            </div>
+        </div>
+        <div class="project-info-content">
+            <p>For the subject “Imagery” we had to make a movie poster with ourselves as the main subject in Photoshop.
+            </p>
+            <p>I got my inspiration from a game called “Horizon Zero Dawn” and from a movie called “Tron”.</p>
+            <div class="project-info-gallery">
+                <img src="imgs/projects/tycho_kerkhofs_poster.png" alt="Movie Poster">
+            </div>
+        </div>
+    </template>
+
+    <!-- TEMPLATE HUD DESIGN -->
+    <template id="template-hud-design">
+        <div class="project-info-title">
+            <h2>HUD Design Game</h2>
+            <div class="card-tags">
+                <p>HUD</p>
+                <p>UI/UX</p>
+            </div>
+        </div>
+        <div class="project-info-content">
+            <p>For the subject “UI/UX Design” I had to make a HUD for a First Person Shooter game. First I had to make a
+                wireframe
+                which shows where all the items are going to be placed.</p>
+            <div class="project-info-gallery">
+                <img src="imgs/projects/hud_gamedesign.png" alt="HUD design for an FPS game">
+                <img src="imgs/projects/hud_wireframe.png" alt="Wireframe HUD design">
+            </div>
+        </div>
+    </template>
+
+    <!-- TEMPLATE TREEHOUSE -->
+    <template id="template-treehouse">
+        <div class="project-info-title">
+            <h2>3D Model Of A Tree House</h2>
+            <div class="card-tags">
+                <p>3D model</p>
+                <p>Maya</p>
+                <p>Substance 3D Painter</p>
+            </div>
+        </div>
+        <div class="project-info-content">
+            <p>I created an abandoned mechanical tree house as my final assignment for my 3D modelling class</p>
+            <div class="sketchfab-embed-wrapper">
+                <iframe title="Abandoned mechanical tree house" frameborder="0" allowfullscreen
+                    mozallowfullscreen="true" webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                    execution-while-out-of-viewport execution-while-not-rendered web-share
+                    src="https://sketchfab.com/models/cf652ba043c643b882e5f036dd51e7ed/embed?autospin=1&autostart=1&dnt=1">
+                </iframe>
+            </div>
+        </div>
+    </template>
+
+</body>
+
+</html>
