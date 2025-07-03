@@ -1,8 +1,34 @@
 let form;
 
 function documentReady() {
+    const hamburger = $('.hamburger');
+    const navLinks = $('.nav-links');
+
     form = document.getElementById('my-contact-form');
     form.addEventListener('submit', formHandler);
+
+    // Toggle menu when hamburger clicked
+    hamburger.on('click', function (e) {
+        e.stopPropagation(); // prevent event bubbling up to document
+        navLinks.toggleClass('active');
+    });
+
+    // Close menu when clicking on a nav link
+    navLinks.find('a').on('click', function () {
+        navLinks.removeClass('active');
+    });
+
+    $(document).on('click', function (e) {
+        // Check if the click target is NOT inside hamburger or nav-links
+        if (
+            !hamburger.is(e.target) &&
+            hamburger.has(e.target).length === 0 &&
+            !navLinks.is(e.target) &&
+            navLinks.has(e.target).length === 0
+        ) {
+            navLinks.removeClass('active');
+        }
+    });
 }
 
 window.addEventListener('scroll', () => {
