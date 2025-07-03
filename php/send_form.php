@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Your message has been sent successfully.";
     } else {
         http_response_code(500);
-        echo "Oops! Something went wrong, and we couldn’t send your message.";
+        echo "Oops! Something went wrong, and we couldn't send your message.";
     }
 } else {
     http_response_code(403);
