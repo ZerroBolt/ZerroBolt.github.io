@@ -508,10 +508,12 @@ header.scrolled {
   display: flex;
   justify-content: space-between;
   gap: 80px;
+  flex-direction: row; 
+  flex-wrap: wrap;
 }
 
 .contact-section div, .contact-section aside {
-  width: 100%;
+  flex: 1;
 }
 
 .contact-section div {
@@ -535,6 +537,8 @@ header.scrolled {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .contact-form input,
@@ -581,6 +585,7 @@ header.scrolled {
 footer {
   background-color: #0E0E0E;
   padding: 30px 0px;
+  width: 100%;
 }
 
 footer p {
@@ -597,6 +602,18 @@ footer p {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
+  h1 {
+    font-size: 72px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
 
   /* Navbar */
   .navbar {
@@ -616,6 +633,10 @@ footer p {
     text-align: center;
   }
 
+  .home-section p {
+    font-size: 24px;
+  }
+
 
   /* About me */
   .about-me-content {
@@ -624,6 +645,18 @@ footer p {
 
 
   /* Experiences */
+  .card-title h2 {
+    font-size: 32px;
+  }
+
+  .card-title p {
+    font-size: 20px;
+  }
+
+  .card-title {
+    flex-direction: column;
+  }
+
   .card-content {
     flex-direction: column;
     align-items: flex-start;
@@ -653,6 +686,18 @@ footer p {
   .project-info-gallery img {
     flex: 1 1 calc(50% - 16px);
     max-width: calc(50% - 16px);
+  }
+
+
+  /* Contact */
+  .contact-form {
+    gap: 24px;
+  } 
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 20px;
   }
 }
 
