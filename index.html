@@ -17,11 +17,11 @@
     <header id="main-header">
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="#home">// Home</a></li>
-                <li><a href="#about-me">// About me</a></li>
-                <li><a href="#experiences">// My Experiences</a></li>
-                <li><a href="#projects">// Projects</a></li>
-                <li><a href="#contact">// Contact</a></li>
+                <li><a href="#home" data-i18n="nav_home">// Home</a></li>
+                <li><a href="#about-me" data-i18n="nav_aboutme">// About me</a></li>
+                <li><a href="#experiences" data-i18n="nav_experiences">// My Experiences</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">// Projects</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">// Contact</a></li>
             </ul>
 
             <!-- Hamburger button -->
@@ -33,9 +33,14 @@
         </nav>
         <nav class="secondaryNavbar">
             <ul class="nav-links">
-                <li><a href="https://www.linkedin.com/in/tycho-k/"
-                        target="_blank"><code>&lt;!-- LinkedIn --&gt;</code></a></li>
+                <li><a href="https://www.linkedin.com/in/tycho-k/" target="_blank"><code>&lt;!-- LinkedIn --&gt;</code></a></li>
             </ul>
+            <!-- Language Dropdown -->
+            <select id="language-select" hidden>
+                <option value="en">English</option>
+                <option value="nl">Nederlands</option>
+                <option value="ja">日本語</option>
+            </select>
         </nav>
     </header>
 
@@ -44,7 +49,7 @@
         <section id="home" class="home-section">
             <div class="home-content">
                 <h1>Tycho Kerkhofs</h1>
-                <p>Game design student & hobby photographer</p>
+                <p data-i18n="home_intro">Game design student & hobby photographer</p>
             </div>
         </section>
 
@@ -52,7 +57,7 @@
         <section id="about-me" class="about-me-section">
             <div class="about-me-content">
                 <div>
-                    <h3>// About me</h3>
+                    <h3 data-i18n="nav_aboutme">// About me</h3>
                     <h2>Who am I?</h2>
                     <p>Hi there!</p>
                     <p>You have found the portfolio of Tycho Kerkhofs. Currently, I am a second-year game design student
@@ -82,7 +87,7 @@
 
         <!-- Experiences section -->
         <section id="experiences" class="experiences-section">
-            <h3>// My Experiences</h3>
+            <h3 data-i18n="nav_experiences">// My Experiences</h3>
 
             <!-- Card -->
             <div class="experiences-card">
@@ -149,7 +154,7 @@
 
         <!-- Projects Section -->
         <section id="projects" class="projects-section">
-            <h3>// Projects</h3>
+            <h3 data-i18n="nav_projects">// Projects</h3>
 
             <!-- TEMPLATE PROJECT CARD -->
             <template>
@@ -234,7 +239,7 @@
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <div>
-                <h3>// Contact</h3>
+                <h3 data-i18n="nav_contact">// Contact</h3>
                 <ul class="contact-links">
                     <li><a href="https://www.linkedin.com/in/tycho-k/" target="_blank">LinkedIn</a></li>
                     <li><a href="https://www.instagram.com/tychokerkhofs/" target="_blank">Instagram</a></li>
@@ -393,7 +398,8 @@
             </div>
         </div>
     </template>
-
+    
+    <script type="text/javascript" src="js/load_json.js"></script>
 </body>
 
 </html>
