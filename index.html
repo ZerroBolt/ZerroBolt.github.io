@@ -160,61 +160,73 @@
                     </div>
                 </div>
             </template>
-
+            
             <!-- Project Row 1 -->
             <div class="project-row">
                 <!-- HORROR TRAILER - SOUND DESIGN -->
-                <div class="project-item">
-                    <div class="project-thumbnail" onclick="projectCardClicked(event)" data-template="template-sound">
-                        <img src="imgs/projects/sound-design-trailer.jpg" alt="Thumbnail Sound Design Horror Trailer">
-                        <h3>Sound Design Horror Trailer</h3>
+                <div class="project-wrapper">
+                    <div class="project-item">
+                        <div class="project-thumbnail" onclick="projectCardClicked(event)" data-template="template-sound">
+                            <img src="imgs/projects/sound-design-trailer.jpg" alt="Thumbnail Sound Design Horror Trailer">
+                            <h3>Sound Design Horror Trailer</h3>
+                        </div>
                     </div>
+                    <div class="project-info-mobile hidden"></div>
                 </div>
-
+            
                 <!-- MYANIMELIST REDESIGN UI/UX -->
-                <div class="project-item">
-                    <div class="project-thumbnail" onclick="projectCardClicked(event)" data-template="template-mal">
-                        <img src="imgs/projects/mal_redesign.png" alt="Thumbnail MyAnimeList redesign assignment">
-                        <h3>Redesign Of The MyAnimeList Website</h3>
+                <div class="project-wrapper">
+                    <div class="project-item">
+                        <div class="project-thumbnail" onclick="projectCardClicked(event)" data-template="template-mal">
+                            <img src="imgs/projects/mal_redesign.png" alt="Thumbnail MyAnimeList redesign assignment">
+                            <h3>Redesign Of The MyAnimeList Website</h3>
+                        </div>
                     </div>
+                    <div class="project-info-mobile hidden"></div>
                 </div>
-
+            
                 <!-- MOVIE POSTER IMAGERY -->
-                <div class="project-item">
-                    <div class="project-thumbnail" onclick="projectCardClicked(event)" data-template="template-poster">
-                        <img src="imgs/projects/thumbnail_tycho_kerkhofs_poster.png"
-                            alt="Thumbnail Movie Poster Assignment">
-                        <h3>Movie Poster Assignment</h3>
+                <div class="project-wrapper">
+                    <div class="project-item">
+                        <div class="project-thumbnail" onclick="projectCardClicked(event)" data-template="template-poster">
+                            <img src="imgs/projects/thumbnail_tycho_kerkhofs_poster.png" alt="Thumbnail Movie Poster Assignment">
+                            <h3>Movie Poster Assignment</h3>
+                        </div>
                     </div>
+                    <div class="project-info-mobile hidden"></div>
                 </div>
-
+            
                 <!-- Shared project info block -->
-                <div class="project-info hidden"></div>
+                <div class="project-info-desktop hidden"></div>
             </div>
-
-
+            
+            
             <!-- Project Row 2 -->
             <div class="project-row">
                 <!-- GAME HUD REDESIGN UI/UX -->
-                <div class="project-item">
-                    <div class="project-thumbnail" onclick="projectCardClicked(event)"
-                        data-template="template-hud-design">
-                        <img src="imgs/projects/hud_gamedesign.png">
-                        <h3>HUD Design Game</h3>
+                <div class="project-wrapper">
+                    <div class="project-item">
+                        <div class="project-thumbnail" onclick="projectCardClicked(event)" data-template="template-hud-design">
+                            <img src="imgs/projects/hud_gamedesign.png">
+                            <h3>HUD Design Game</h3>
+                        </div>
                     </div>
+                    <div class="project-info-mobile hidden"></div>
                 </div>
-
+            
                 <!-- 3D MODEL TREEHOUSE -->
-                <div class="project-item">
-                    <div class="project-thumbnail" onclick="projectCardClicked(event)"
-                        data-template="template-treehouse">
-                        <img src="imgs/projects/treehouse.png" alt="Thumbnail 3D model assignment">
-                        <h3>3D Model Of A Tree House</h3>
+                <div class="project-wrapper">
+                    <div class="project-item">
+                        <div class="project-thumbnail" onclick="projectCardClicked(event)" data-template="template-treehouse">
+                            <img src="imgs/projects/treehouse.png" alt="Thumbnail 3D model assignment">
+                            <h3>3D Model Of A Tree House</h3>
+                        </div>
                     </div>
+                    <div class="project-info-mobile hidden"></div>
                 </div>
-
+            
                 <!-- Shared project info block -->
-                <div class="project-info hidden"></div>
+                <div class="project-info-desktop hidden"></div>
             </div>
 
         </section>
@@ -286,7 +298,7 @@
             <p>I used Ableton to record and edit all the sounds for the trailer. In the last couple of
                 weeks I learned a lot about sound design, what it means to have a decent setup to create
                 realistic sounds and how to use Ableton and its sound effects.</p>
-            <p>
+            <p class="iframe-vimeo">
                 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1030307433?h=14efa06d58" width="640"
                     height="360" frameborder="0" allowfullscreen>
                 </iframe>

@@ -387,15 +387,12 @@ header.scrolled {
   gap: 40px;
 }
 
-
-
-
-
 .card-tags {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .card-tags p {
@@ -444,7 +441,7 @@ header.scrolled {
   text-align: center;
 }
 
-.project-info {
+.project-info-desktop, .project-info-mobile {
   display: flex;
   width: 1520px;
   padding: 20px 40px;
@@ -481,7 +478,12 @@ header.scrolled {
   text-decoration: underline;
 }
 
-
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 33%;
+  box-sizing: border-box;
+}
 
 .project-row {
   display: flex;
@@ -497,7 +499,7 @@ header.scrolled {
   box-sizing: border-box;
 }
 
-.project-info {
+.project-info-desktop, .project-info-mobile {
   width: 100%;
   padding: 1rem;
   margin: 0 1rem;
@@ -686,30 +688,70 @@ footer p {
     display: flex;
   }
 
-  /* Optional: Adjust secondary navbar */
   .secondaryNavbar {
     display: none;
-    /* hide secondary nav on small screens or style differently */
   }
 
-  /* Optional: Adjust header padding on mobile */
   header {
     padding: 20px 5%;
+  }
+
+  .sketchfab-embed-wrapper iframe {
+    max-width: unset;
+  }
+
+  .card-small-info a {
+    color: #5CE4D4;
+    text-decoration: underline;
+  }
+
+  .iframe-vimeo, .iframe-vimeo iframe {
+    width: 100%;
+  }
+
+    /* Projects */
+  .project-wrapper {
+    flex: 1 1 100%;
+  }
+  
+  .project-info-mobile {
+    margin: 0;
+  }
+
+  .project-row {
+    flex-direction: column;
+  }
+
+  .project-info-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-info-content a {
+    color: #5CE4D4;
+  }
+
+  .project-item {
+    padding: 1rem 0;
   }
 }
 
 @media (max-width: 768px) {
 
   h1 {
-    font-size: 72px;
+    font-size: 3.5rem;
   }
 
   h2 {
-    font-size: 48px;
+    font-size: 2.5rem!important;
   }
 
   h3 {
-    font-size: 24px;
+    font-size: 1.5rem!important;
+  }
+
+  p {
+    font-size: 1.25rem;
   }
 
   /* Home */
@@ -719,7 +761,7 @@ footer p {
   }
 
   .home-section p {
-    font-size: 24px;
+    font-size: 1.5rem
   }
 
 
@@ -735,11 +777,11 @@ footer p {
 
   /* Experiences */
   .card-title h2 {
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   .card-title p {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .card-title {
@@ -754,7 +796,7 @@ footer p {
   .card-content aside {
     width: 100%;
     justify-content: flex-start;
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
 
   .card-small-info {
@@ -770,21 +812,19 @@ footer p {
     min-width: 100px;
   }
 
+  .card-tags {
+    justify-content: flex-start;
+  }
+
+  .card-tags p {
+    padding: 5px 10px;
+  }
+
   /* Projects */
-  .project-row {
-    flex-direction: column;
-  }
-
-  .project-info-title {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .project-info-gallery img {
-    flex: 1 1 calc(50% - 16px);
-    max-width: calc(50% - 16px);
+    flex: 1 1 100%;
+    max-width: 100%;
   }
-
 
   /* Contact */
   .contact-section {
@@ -798,7 +838,7 @@ footer p {
   .contact-form input,
   .contact-form textarea,
   .contact-form button {
-    font-size: 20px;
+    font-size: 1.25rem;
     width: 100%;
   }
 }
@@ -806,11 +846,23 @@ footer p {
 @media (max-width: 480px) {
 
   /* Experiences */
-  
+  .card-main {
+    min-width: 100px;
+  } 
 
   /* Projects */
-  .project-info-gallery img {
-    flex: 1 1 100%;
-    max-width: 100%;
+  .iframe-vimeo, .iframe-vimeo iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Contact */
+  .contact-links a {
+    font-size: 1.25rem;
+  }
+
+  /* Footer */
+  footer p {
+    font-size: 1rem;
   }
 }
