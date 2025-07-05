@@ -650,6 +650,11 @@ footer p {
 }
 
 @media (max-width: 1200px) {
+  section {
+    padding: 2rem 0;
+    min-height: calc(100vh - 60px);
+  }
+
   .navbar .nav-links {
     display: none;
     position: absolute;
