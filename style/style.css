@@ -651,7 +651,8 @@ footer p {
 
 @media (max-width: 1200px) {
   section {
-    padding: 2rem 0;
+    padding: 0;
+    padding-bottom: 2rem;
     min-height: calc(100vh - 60px);
   }
 
