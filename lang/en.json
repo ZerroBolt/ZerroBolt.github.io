@@ -11,6 +11,19 @@
     "aboutme_welcome": "Hi there!",
     "aboutme_introduction": "You have found the portfolio of Tycho Kerkhofs. Currently, I am a second-year game design student at CMGT at Saxion in Enschede (the Netherlands). I am very passionate about Virtual Reality and its games. Eventually I would like to create Virtual Reality games and applications. In my free time I do a lot with photography. Most of the time I will post my photos to my Instagram profile.",
     "aboutme_studyinfo": "Before this study I already finished the MBO study Applicatie- & Mediaontwikkelaar at Summa College in Eindhoven (the Netherlands). Here I mainly worked with the languages <span class=\"language-tag\">C#</span>, <span class=\"language-tag\">SQL</span>, <span class=\"language-tag\">HTML</span>, <span class=\"language-tag\">CSS</span> and <span class=\"language-tag\">PHP</span>. In the 3 years of this study, I also had 2 internships where I learned a lot about the professional IT industry.",
-    "aboutme_websiteinfo": "On my website you can find information about my projects, my resume, a way to contact me, and a way to go to my other socials."
+    "aboutme_websiteinfo": "On my website you can find information about my projects, my resume, a way to contact me, and a way to go to my other socials.",
 
+    "intern_countit_name": "Intern at Count-IT",
+    "intern_countit_date": "Feb. 2021 - Jun. 2021",
+    "intern_countit_place": "Herkenbosch, NL",
+    "intern_countit_description": " My second internship I did was at Count-IT in Herkenbosch (the Netherlands). This company focusses on creating cash register systems. My task was to make a quick and easy to use debug functionality to the app, so that bugs were a lot easier to fix. I had to work in C# to make everything. I also had to connect the application to actual cash registers and ATM's. I learned a lot about C# and the professional IT industry in this internship.",
+
+    "intern_bonsai_name": "Intern at Bonsai Media",
+    "intern_bonsai_date": "Aug. 2019 - Feb. 2020",
+    "intern_bonsai_place": "Nederweert, NL",
+    "intern_bonsai_description": "My first internship I ever did was at Bonsai Media in Nederweert (the Nederlands). I mainly worked with WordPress, and I often needed to change the styling in CSS.",
+
+    
+    
+    "" : ""
 }
