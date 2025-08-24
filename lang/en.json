@@ -5,6 +5,12 @@
     "nav_projects": "// Projects",
     "nav_contact": "// Contact",
 
-    "home_intro": "Game design student & hobby photographer"
+    "home_intro": "Game design student & hobby photographer",
+
+    "aboutme_header": "Who am I?",
+    "aboutme_welcome": "Hi there!",
+    "aboutme_introduction": "You have found the portfolio of Tycho Kerkhofs. Currently, I am a second-year game design student at CMGT at Saxion in Enschede (the Netherlands). I am very passionate about Virtual Reality and its games. Eventually I would like to create Virtual Reality games and applications. In my free time I do a lot with photography. Most of the time I will post my photos to my Instagram profile.",
+    "aboutme_studyinfo": "Before this study I already finished the MBO study Applicatie- & Mediaontwikkelaar at Summa College in Eindhoven (the Netherlands). Here I mainly worked with the languages <span class=\"language-tag\">C#</span>, <span class=\"language-tag\">SQL</span>, <span class=\"language-tag\">HTML</span>, <span class=\"language-tag\">CSS</span> and <span class=\"language-tag\">PHP</span>. In the 3 years of this study, I also had 2 internships where I learned a lot about the professional IT industry.",
+    "aboutme_websiteinfo": "On my website you can find information about my projects, my resume, a way to contact me, and a way to go to my other socials."
 
 }
