@@ -1,0 +1,29 @@
+{
+    "nav_home": "// Home",
+    "nav_aboutme": "// Over mij",
+    "nav_experiences": "// Werkervaring",
+    "nav_projects": "// Projecten",
+    "nav_contact": "// Contact",
+
+    "home_intro": "Game design student & hobby fotograaf",
+
+    "aboutme_header": "Wie ben ik?",
+    "aboutme_welcome": "Hallo!",
+    "aboutme_introduction": "Je hebt het portfolio van Tycho Kerkhofs gevonden. Momenteel ben ik tweedejaars student game design aan CMGT in Enschede (Nederland). Ik ben erg gepassioneerd over virtual reality en de bijbehorende games. Uiteindelijk wil ik virtual reality-games en -applicaties maken. In mijn vrije tijd houd ik me veel bezig met fotografie. Meestal plaats ik mijn foto's op mijn Instagram-profiel.",
+    "aboutme_studyinfo": "Voorafgaand aan deze studie heb ik de MBO-opleiding Applicatie- & Mediaontwikkelaar aan het Summa College in Eindhoven (Nederland) afgerond. Hier heb ik voornamelijk gewerkt met de talen <span class=\"language-tag\">C#</span>, <span class=\"language-tag\">SQL</span>, <span class=\"language-tag\">HTML</span>, <span class=\"language-tag\">CSS</span> en <span class=\"language-tag\">PHP</span>. Tijdens deze 3-jarige opleiding heb ik ook 2 stages gelopen, waar ik veel heb geleerd over de professionele IT-sector.",
+    "aboutme_websiteinfo": "Op mijn website vind je informatie over mijn projecten, mijn cv, mijn contactgegevens en een link naar mijn andere sociale media.",
+
+    "intern_countit_name": "Stagiair bij Count-IT",
+    "intern_countit_date": "Feb. 2021 - Jun. 2021",
+    "intern_countit_place": "Herkenbosch, NL",
+    "intern_countit_description": "Mijn tweede stage liep ik bij Count-IT in Herkenbosch (Nederland). Dit bedrijf richt zich op het ontwikkelen van kassasystemen. Mijn taak was om een snelle en gebruiksvriendelijke debugfunctie voor de app te maken, zodat bugs veel gemakkelijker konden worden opgelost. Ik moest alles in C# programmeren. Ook moest ik de applicatie koppelen aan echte kassa's en pinautomaten. Tijdens deze stage heb ik veel geleerd over C# en de professionele IT-sector.",
+
+    "intern_bonsai_name": "Stagiair bij Bonsai Media",
+    "intern_bonsai_date": "Aug. 2019 - Feb. 2020",
+    "intern_bonsai_place": "Nederweert, NL",
+    "intern_bonsai_description": "Mijn eerste stage was bij Bonsai Media in Nederweert (Nederland). Ik werkte voornamelijk met WordPress en moest vaak de styling in CSS aanpassen.",
+
+    
+    
+    "" : ""
+}

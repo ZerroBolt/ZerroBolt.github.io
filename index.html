@@ -17,11 +17,11 @@
     <header id="main-header">
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="#home">// Home</a></li>
-                <li><a href="#about-me">// About me</a></li>
-                <li><a href="#experiences">// My Experiences</a></li>
-                <li><a href="#projects">// Projects</a></li>
-                <li><a href="#contact">// Contact</a></li>
+                <li><a href="#home" data-i18n="nav_home">// Home</a></li>
+                <li><a href="#about-me" data-i18n="nav_aboutme">// About me</a></li>
+                <li><a href="#experiences" data-i18n="nav_experiences">// My Experiences</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">// Projects</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">// Contact</a></li>
             </ul>
 
             <!-- Hamburger button -->
@@ -33,9 +33,14 @@
         </nav>
         <nav class="secondaryNavbar">
             <ul class="nav-links">
-                <li><a href="https://www.linkedin.com/in/tycho-k/"
-                        target="_blank"><code>&lt;!-- LinkedIn --&gt;</code></a></li>
+                <li><a href="https://www.linkedin.com/in/tycho-k/" target="_blank"><code>&lt;!-- LinkedIn --&gt;</code></a></li>
             </ul>
+            <!-- Language Dropdown -->
+            <!-- <select id="language-select">
+                <option value="en">English</option>
+                <option value="nl">Nederlands</option>
+                <option value="ja">日本語</option>
+            </select> -->
         </nav>
     </header>
 
@@ -44,7 +49,7 @@
         <section id="home" class="home-section">
             <div class="home-content">
                 <h1>Tycho Kerkhofs</h1>
-                <p>Game design student & hobby photographer</p>
+                <p data-i18n="home_intro">Game design student & hobby photographer</p>
             </div>
         </section>
 
@@ -52,15 +57,15 @@
         <section id="about-me" class="about-me-section">
             <div class="about-me-content">
                 <div>
-                    <h3>// About me</h3>
-                    <h2>Who am I?</h2>
-                    <p>Hi there!</p>
-                    <p>You have found the portfolio of Tycho Kerkhofs. Currently, I am a second-year game design student
+                    <h3 data-i18n="nav_aboutme">// About me</h3>
+                    <h2 data-i18n="aboutme_header">Who am I?</h2>
+                    <p data-i18n="aboutme_welcome">Hi there!</p>
+                    <p data-i18n="aboutme_introduction">You have found the portfolio of Tycho Kerkhofs. Currently, I am a second-year game design student
                         at CMGT at Saxion in Enschede (the Netherlands). I am very passionate about Virtual Reality and
                         its games. Eventually I would like to create Virtual Reality games and applications. In my free
                         time I do a lot with photography. Most of the time I will post my photos to my Instagram
                         profile.</p>
-                    <p>Before this study I already finished the MBO study Applicatie- & Mediaontwikkelaar at Summa
+                    <p data-i18n="aboutme_studyinfo">Before this study I already finished the MBO study Applicatie- & Mediaontwikkelaar at Summa
                         College in Eindhoven (the Netherlands). Here I mainly worked with the languages
                         <span class="language-tag">C#</span>,
                         <span class="language-tag">SQL</span>,
@@ -71,7 +76,7 @@
                         where I learned a lot about
                         the professional IT industry.
                     </p>
-                    <p>On my website you can find information about my projects, my resume, a way to contact me, and a
+                    <p data-i18n="aboutme_websiteinfo">On my website you can find information about my projects, my resume, a way to contact me, and a
                         way to go to my other socials.</p>
                 </div>
                 <aside class="about-me-picture">
@@ -82,21 +87,21 @@
 
         <!-- Experiences section -->
         <section id="experiences" class="experiences-section">
-            <h3>// My Experiences</h3>
+            <h3 data-i18n="nav_experiences">// My Experiences</h3>
 
             <!-- Card -->
             <div class="experiences-card">
                 <div class="card-title" onclick="experienceCardClicked(event)">
-                    <h2>Intern at Count-IT</h2>
-                    <p>Feb. 2021 - Jun. 2021</p>
+                    <h2 data-i18n="intern_countit_name">Intern at Count-IT</h2>
+                    <p data-i18n="intern_countit_date">Feb. 2021 - Jun. 2021</p>
                 </div>
                 <div class="card-content hidden">
                     <div class="card-main">
                         <div class="card-small-info">
-                            <p>Herkenbosch, NL</p>
+                            <p data-i18n="intern_countit_place">Herkenbosch, NL</p>
                             <p><a href="https://www.count-it.eu/en/home-en/" target="_blank">count-it.eu</a></p>
                         </div>
-                        <p>
+                        <p data-i18n="intern_countit_description">
                             My second internship I did was at Count-IT in Herkenbosch (the Netherlands). This company
                             focusses on creating cash register systems. My task was to make a quick and easy to use
                             debug functionality to the app, so that bugs were a lot easier to fix. I had to work in C#
@@ -119,16 +124,16 @@
             <!-- Card -->
             <div class="experiences-card">
                 <div class="card-title" onclick="experienceCardClicked(event)">
-                    <h2>Intern at Bonsai Media</h2>
-                    <p>Aug. 2019 - Feb. 2020</p>
+                    <h2 data-i18n="intern_bonsai_name">Intern at Bonsai Media</h2>
+                    <p data-i18n="intern_bonsai_date">Aug. 2019 - Feb. 2020</p>
                 </div>
                 <div class="card-content hidden">
                     <div class="card-main">
                         <div class="card-small-info">
-                            <p>Nederweert, NL</p>
+                            <p data-i18n="intern_bonsai_place">Nederweert, NL</p>
                             <p><a href="https://www.bonsaimedia.nl/" target="_blank">bonsaimedia.nl</a></p>
                         </div>
-                        <p>
+                        <p data-i18n="intern_bonsai_description">
                             My first internship I ever did was at Bonsai Media in Nederweert (the Nederlands). I mainly
                             worked with WordPress, and I often needed to change the styling in CSS.
                         </p>
@@ -149,7 +154,7 @@
 
         <!-- Projects Section -->
         <section id="projects" class="projects-section">
-            <h3>// Projects</h3>
+            <h3 data-i18n="nav_projects">// Projects</h3>
 
             <!-- TEMPLATE PROJECT CARD -->
             <template>
@@ -234,7 +239,7 @@
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <div>
-                <h3>// Contact</h3>
+                <h3 data-i18n="nav_contact">// Contact</h3>
                 <ul class="contact-links">
                     <li><a href="https://www.linkedin.com/in/tycho-k/" target="_blank">LinkedIn</a></li>
                     <li><a href="https://www.instagram.com/tychokerkhofs/" target="_blank">Instagram</a></li>
@@ -242,7 +247,8 @@
                     <li><a href="mailto:tychokerkhofs@gmail.com">Email</a></li>
                 </ul>
             </div>
-            <aside>
+<!--TODO: uncomment this when I have a correct working contact form-->
+            <!-- <aside>
                 <form id="my-contact-form" class="contact-form" action="https://formspree.io/f/mqaqqera" method="POST">
                     <input type="text" name="name" placeholder="Your Name" required />
                     <input type="email" name="email" placeholder="Your Email" required />
@@ -250,7 +256,7 @@
                     <textarea name="message" placeholder="Your Message" required></textarea>
                     <button type="submit" class="send-button">Send</button>
                 </form>
-            </aside>
+            </aside> -->
         </section>
     </main>
 
@@ -393,7 +399,8 @@
             </div>
         </div>
     </template>
-
+    
+    <script type="text/javascript" src="js/load_json.js"></script>
 </body>
 
 </html>
