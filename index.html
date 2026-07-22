@@ -252,6 +252,12 @@
                 </form>
             </aside> -->
         </section>
+
+        <div class="image-overlay hidden">
+            <div class="image-viewer">
+                <img src="imgs/projects/mal-settingspage.png" alt="Large image">
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -327,8 +333,8 @@
                     target="_blank">Go to Figma to see the full interactive design</a>
             </p>
             <div class="project-info-gallery">
-                <img src="imgs/projects/mal-homepage.png" alt="Redesign MyAnimeList Homepage">
-                <img src="imgs/projects/mal-settingspage.png" alt="Redesign MyAnimeList Settingspage">
+                <img src="imgs/projects/mal-homepage.png" alt="Redesign MyAnimeList Homepage" onclick="imageViewerClicked(event)">
+                <img src="imgs/projects/mal-settingspage.png" alt="Redesign MyAnimeList Settingspage" onclick="imageViewerClicked(event)">
             </div>
         </div>
     </template>
@@ -346,7 +352,7 @@
             </p>
             <p>I got my inspiration from a game called “Horizon Zero Dawn” and from a movie called “Tron”.</p>
             <div class="project-info-gallery">
-                <img src="imgs/projects/tycho_kerkhofs_poster.png" alt="Movie Poster">
+                <img src="imgs/projects/tycho_kerkhofs_poster.png" alt="Movie Poster" onclick="imageViewerClicked(event)">
             </div>
         </div>
     </template>
@@ -365,8 +371,8 @@
                 wireframe
                 which shows where all the items are going to be placed.</p>
             <div class="project-info-gallery">
-                <img src="imgs/projects/hud_gamedesign.png" alt="HUD design for an FPS game">
-                <img src="imgs/projects/hud_wireframe.png" alt="Wireframe HUD design">
+                <img src="imgs/projects/hud_gamedesign.png" alt="HUD design for an FPS game" onclick="imageViewerClicked(event)">
+                <img src="imgs/projects/hud_wireframe.png" alt="Wireframe HUD design" onclick="imageViewerClicked(event)">
             </div>
         </div>
     </template>
@@ -384,7 +390,7 @@
         <div class="project-info-content">
             <p>I created an abandoned mechanical tree house as my final assignment for my 3D modelling class</p>
             <div class="sketchfab-embed-wrapper">
-                <iframe title="Abandoned mechanical tree house" frameborder="0" allowfullscreen
+                <iframe title="Abandoned mechanical tree house" frameborder="0" allowfullscreen 
                     mozallowfullscreen="true" webkitallowfullscreen="true"
                     allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
                     execution-while-out-of-viewport execution-while-not-rendered web-share

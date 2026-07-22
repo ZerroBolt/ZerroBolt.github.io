@@ -5,7 +5,7 @@ function documentReady() {
     const navLinks = $('.nav-links');
 
     form = document.getElementById('my-contact-form');
-    form.addEventListener('submit', formHandler);
+    // form.addEventListener('submit', formHandler);
 
     // Toggle menu when hamburger clicked
     hamburger.on('click', function (e) {
@@ -123,6 +123,21 @@ function projectCardClicked(event) {
     $(currentInfo).hide().removeClass('hidden').fadeIn('fast');
     currentlyActiveCard = clickedCard;
 }
+
+function imageViewerClicked(event) {
+    event.preventDefault();
+
+    const overlay = $('.image-overlay');
+    const overlayImage = overlay.find('img');
+    const currentImage = event.currentTarget;
+
+    let cloneImage = currentImage.cloneNode();
+
+    overlayImage.replaceWith(cloneImage);
+    
+    overlay.toggleClass('hidden');
+}
+
 
 function formHandler(event) {
     event.preventDefault();

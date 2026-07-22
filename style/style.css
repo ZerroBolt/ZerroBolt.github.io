@@ -142,8 +142,43 @@ section {
   display: none !important;
 }
 
+.image-overlay {
+  z-index: 2;
+
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.image-viewer {    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #0e3b50;
+  padding: 20px;
+  border-radius: 12px;
+
+  max-height: 90vh;
+  max-width: 90vw;
+  box-sizing: border-box;
+}
+
+.image-viewer img {
+  display: block;
+  max-width: calc(90vw - 40px);
+  max-height: calc(90vh - 40px);
+  border-radius: 4px;
+  object-fit: contain;
+}
+
 /* Navbar */
 header {
+  z-index: 1 !important;
+
   padding: 30px 10%;
   position: sticky;
   top: 0;
