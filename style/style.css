@@ -7,13 +7,30 @@ html {
   scroll-behavior: smooth;
 }
 
-body, h1, h2, h3, h4, h5, h6, p {
+html, body, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+  padding: 0;
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+}
+
+a {
+  text-decoration: unset;
+}
+
+mark {
+  background-color: unset;
+  color: unset;
 }
 
 
@@ -71,6 +88,7 @@ img {
     --color-text: #1F241F;
     --color-text-grey: #6B6B6B;
     --color-text-light: #FFF;
+    --color-text-light-80: #FFFFFF80;
 
     --color-accent: #455CE9;
     --color-accent-dark: #334BD3;
@@ -133,9 +151,168 @@ body {
     background-color: var(--color-background-light);
 }
 
+h1 {
+  font-size: 64px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+
+  color: var(--color-accent);
+}
+
+h2 {
+
+}
+
+h6 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+  color: var(--color-text-grey);
+
+  font-size: 14px;
+}
+
 p {
-    color: var(--color-text);
-    font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+
+  color: var(--color-text);
+}
+
+.color-grey {
+  color: var(--color-text-grey);
+}
+
+.color-white {
+  color: var(--color-text-light);
+}
+
+
+/* ------------------------- Nav -------------------------------------------------- */
+
+#open-menu-section {
+  position: fixed;
+  width: 100%;
+}
+
+#open-menu-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+#open-menu-section button {
+  display: flex;
+  padding: 5px;
+  background: unset;
+}
+
+#open-menu-section p {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+
+/* ------------------------- Main Menu -------------------------------------------------- */
+
+#main-menu {
+  background-color: var(--color-background-dark);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+#main-menu>nav {
+  margin: 0px 20px;
+}
+
+#main-menu aside {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+#main-menu button {
+  padding: 5px;
+  background-color: var(--color-background-light);
+}
+
+#main-menu a {
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-text-light-80);
+}
+
+#main-nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+#main-nav a {
+  font-size: 45px;
+  color: var(--color-text-light-80);
+  display: flex;
+  column-gap: 20px;
+}
+
+#main-nav mark {
+  color: red;
+}
+
+#main-nav a.selected {
+color: var(--color-text-light);
+}
+#main-nav a.selected mark {
+  color: var(--color-highlight);
+}
+
+#main-menu>nav {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+}
+
+#socials-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 0 50px;
+}
+
+#socials-nav a {
+  color: var(--color-text-light-80);
+  font-size: 20px;
+}
+
+
+/* ------------------------- Hero -------------------------------------------------- */
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+
+  text-align: center;
+}
+
+#hero-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+
+#hero-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  row-gap: 10px;
+
+  background-color: var(--color-background-dark);
+  border-radius: 25px;
+
+  padding: 5px 15px;
 }
 
 
@@ -156,14 +333,6 @@ footer aside {
     row-gap: 5px;
 }
 
-footer h6 {
-    font-family: "Barlow Semi Condensed", sans-serif;
-    font-weight: 400;
-    color: var(--color-text-grey);
-
-    font-size: 14px;
-}
-
 footer p {
-    color: var(--color-text-light);
+    font-size: 16px;
 }

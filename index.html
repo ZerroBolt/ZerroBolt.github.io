@@ -22,15 +22,57 @@
 <body onload="documentReady()">
 
     <!-- Navigation -->
-    <header>
-        <nav></nav>
+    <header id="navigation-header">
+        <section id="open-menu-section">
+            <nav>
+                <button onclick="openMainMenu()">
+                    <p>Menu</p>
+                    <!-- TODO: Set "Menu" Icon -->
+                    <img src="" alt="open menu icon">
+                </button>
+            </nav>
+        </section>
+
+        <!-- TODO: set main-menu to hidden -->
+        <section id="main-menu">
+            <aside>
+                <button onclick="closeMainMenu()">
+                    <img src="" alt="close menu icon">
+                </button>
+            </aside>
+            <nav>
+                <nav id="main-nav">
+                    <a class="selected" href=""><mark>|</mark>Main</a>
+                    <a href=""><mark>|</mark>Who am I?</a>
+                    <a href=""><mark>|</mark>My Projects</a>
+                    <a href=""><mark>|</mark>Contact</a>
+                </nav>
+                <nav id="socials-nav">
+                    <a href="">X</a>
+                    <a href="">Instagram</a>
+                    <a href="">Twitter</a>
+                    <a href="">Linked-In</a>
+                </nav>
+            </nav>
+            
+        </section>
     </header>
 
     <main>
+
+        
         <section id="hero">
             <header>
                 <h1>Tycho Kerkhofs</h1>
             </header>
+            <section id="hero-info">
+                <p class="color-grey">I Create digital experiences through design & technology.</p>
+                <button id="hero-btn">
+                    <!-- TODO: Set "Explore" Icon -->
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevrons-down-icon lucide-chevrons-down"><path d="m7 6 5 5 5-5"/><path d="m7 13 5 5 5-5"/></svg> -->
+                    <p class="color-white">Explore</p>
+                </button>
+            </section>
         </section>
 
         <section id="about">
@@ -55,11 +97,11 @@
     <footer>
         <aside id="version">
             <h6>Version</h6>
-            <p>2026 (C) Edition</p>
+            <p class="color-white">2026 (C) Edition</p>
         </aside>
         <aside id="localTimeContainer">
             <h6>Local time</h6>
-            <p id="localTime"></p>
+            <p id="localTime" class="color-white"></p>
         </aside>
     </footer>
 </body>
