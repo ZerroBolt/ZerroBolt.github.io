@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="style/style.css">
 
+    <!-- TODO: set website icon -->
     <!-- <link rel="shortcut icon" href="imgs/favicon.ico"> -->
 
     <script type="text/javascript" src="js/script.js"></script>
@@ -22,88 +23,191 @@
 <body onload="documentReady()">
 
     <!-- Navigation -->
-    <header id="navigation-header">
-        <section id="open-menu-section">
-            <nav>
-                <button onclick="openMainMenu()">
-                    <p>Menu</p>
-                    <!-- TODO: Set "Menu" Icon -->
-                    <img src="" alt="open menu icon">
-                </button>
-            </nav>
-        </section>
+    <header id="navigation-header"></header>
 
-        <!-- TODO: set main-menu to hidden -->
-        <section id="main-menu">
-            <aside>
-                <button onclick="closeMainMenu()">
-                    <img src="" alt="close menu icon">
-                </button>
-            </aside>
-            <nav>
-                <nav id="main-nav">
-                    <a class="selected" href=""><mark>|</mark>Main</a>
-                    <a href=""><mark>|</mark>Who am I?</a>
-                    <a href=""><mark>|</mark>My Projects</a>
-                    <a href=""><mark>|</mark>Contact</a>
-                </nav>
-                <nav id="socials-nav">
-                    <a href="">X</a>
-                    <a href="">Instagram</a>
-                    <a href="">Twitter</a>
-                    <a href="">Linked-In</a>
-                </nav>
-            </nav>
-            
-        </section>
-    </header>
-
+    <!-- Main -->
     <main>
-
-        
         <section id="hero">
+            <!-- TODO: put section content inside the header (everyting can be inside the header / don't need a separate section element) -->
             <header>
                 <h1>Tycho Kerkhofs</h1>
             </header>
             <section id="hero-info">
-                <p class="color-grey">I Create digital experiences through design & technology.</p>
+                <p>I Create digital experiences through design & technology.</p>
                 <button id="hero-btn">
                     <!-- TODO: Set "Explore" Icon -->
                     <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevrons-down-icon lucide-chevrons-down"><path d="m7 6 5 5 5-5"/><path d="m7 13 5 5 5-5"/></svg> -->
-                    <p class="color-white">Explore</p>
+                    <p>Explore</p>
                 </button>
             </section>
         </section>
 
-        <section id="about">
+        <section id="about" class="dark-section">
+            <div>
+                <!-- TODO: Check if putting a class here is better/worse then setting it in the css file -->
+                <h2>Hi there!</h2>
 
+                <p>
+                    You have found the portfolio of <br/>
+                    <mark>Tycho Kerkhofs</mark>
+                </p>
+                <p>
+                    Currently, I am a fourth-year game design student at <mark>CMGT</mark> at Saxion in Enschede. In my free time I do a lot with photography. Most of the time I will post my photos to my Instagram profile.
+                </p>
+                <p>
+                    Before this study I already finished the MBO study <mark>Applicatie- & Mediaontwikkelaar</mark> at Summa College in Eindhoven. Here I mainly worked with the languages <mark>C#</mark>, <mark>SQL</mark>, <mark>HTML</mark>, <mark>CSS</mark> and <mark>PHP</mark>. In the 3 years of this study, I also had 2 internships where I learned a lot about the professional IT industry.
+                </p>
+                <p>
+                    On my website you can find information about my projects, my resume, a way to contact me, and a way to go to my other socials.
+                </p>
+            </div>
         </section>
 
         <section id="journey">
+            <div>
+                <h2>My Journey</h2>
 
+                <ol class="timeline">
+                    <li class="timeline-item">
+                        <div>
+                            <time datetime="2022">2022</time>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h3>Internship at Count-IT</h3>
+
+                            <p>Did my internship at Count-IT</p>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div>
+                            <time datetime="2023">2023</time>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h3>Started CMGT</h3>
+
+                            <p>This year I started my study at CMGT.</p>
+                            <p>At first I started with the Engineer role.</p>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div>
+                            <time datetime="2024">2024</time>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h3>Switch to Designer</h3>
+
+                            <p>As the Engineers' tasks got more complicated I decided to switch to the Designer role.</p>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div>
+                            <time datetime="2025">2025</time>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h3>Big Monster Project</h3>
+
+                            <p>As the final big project of my second year my team and I had to work on a Monster Project related to the drawings of children.</p>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div>
+                            <time datetime="2026">2026</time>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h3>Japan</h3>
+
+                            <p>As part of my study I decided to go to Japan for around 6 months to learn the language and culture.</p>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div>
+                            <time><mark>Now</mark></time>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h3>Last Big Project & Internship</h3>
+
+                            <p>As part of my last year I have to participate in a big project and need to work on something for a real customer.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
         </section>
 
-        <section id="projects">
-            <header>
-                <h2>Projects</h2>
-            </header>
+        <section id="projects" class="dark-section">
+            <div>
+                <h2>Featured Projects</h2>
+                
+                <div class="project-list">
+                    
+                    <article class="project-card">
+                        <a href="#" class="project-card-link">
+                            <img src="imgs/projects/test.jpg" alt="...">
+
+                            <div class="project-card-content">
+                                <header class="project-card-header">
+                                    <h3>UI/UX Design - Energybuddy</h3>
+                                    <mark>UI/UX</mark>
+                                </header>
+
+                                <p>For this assignment I had to create an energy viewing app.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <a href="#" class="project-card-link">
+                            <img src="imgs/projects/test.jpg" alt="...">
+
+                            <div class="project-card-content">
+                                <header class="project-card-header">
+                                    <h3>UI/UX Design - Energybuddy</h3>
+                                    <mark>C#</mark>
+                                </header>
+
+                                <p>For this assignment I had to create an energy viewing app.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+            </div>
         </section>
 
         <section id="contact">
+            <div>
+                <h2>Let's get in Touch</h2>
+                <div>
+                    <p>Let's work together!</p>
+                    <p>Open for internships.</p>
+                </div>
+            </div>
 
+            <nav class="contact-nav">
+                <a href="mailto:tychokerkhofs@gmail.com">tychokerkhofs@gmail.com</a>
+                <a href="https://github.com/ZerroBolt" target="_blank">Github</a>
+                <a href="https://www.linkedin.com/in/tycho-k/" target="_blank">Linked-In</a>
+            </nav>
+            
         </section>
+
+        <p id="copyright">Copyright &copy; Tycho Kerkhofs. All rights reserved.</p>
     </main>
 
-    <footer>
-        <aside id="version">
-            <h6>Version</h6>
-            <p class="color-white">2026 (C) Edition</p>
-        </aside>
-        <aside id="localTimeContainer">
-            <h6>Local time</h6>
-            <p id="localTime" class="color-white"></p>
-        </aside>
-    </footer>
+    <!-- Footer -->
+    <footer id="main-footer"></footer>
+    
+    <script src="js/components.js"></script>
 </body>
 
 </html>

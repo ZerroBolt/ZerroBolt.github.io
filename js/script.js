@@ -1,13 +1,13 @@
 function documentReady() {
-   console.log("document loaded!")
+   console.log('document loaded!')
 }
 
 function openMainMenu() {
-    document.getElementById("main-menu").hidden = false;
+    document.getElementById('main-menu').hidden = false;
 }
 
 function closeMainMenu() {
-    document.getElementById("main-menu").hidden = true;
+    document.getElementById('main-menu').hidden = true;
 }
 
 function getDateTime() {
@@ -33,5 +33,6 @@ function getDateTime() {
 }
 
 setInterval(function() {
-    document.getElementById("localTime").textContent = getDateTime();
+    document.getElementById('localTime').textContent = getDateTime();
 }, 1000);
+
