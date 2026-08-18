@@ -488,6 +488,10 @@ color: var(--color-text-light);
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    /* CHeck if I still want flex-wrap here (puts the tags underneath the project title) */
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .project-card-content {
@@ -500,6 +504,16 @@ color: var(--color-text-light);
 .project-card-content p {
   color: var(--color-text-light-80);
   font-size: 18px;
+}
+
+.project-card-tags {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.project-card-tags mark:nth-child(n + 3) {
+  display: none;
 }
 
 .project-card-content mark {

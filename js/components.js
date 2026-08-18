@@ -1,38 +1,22 @@
 /* ------------------------- Load Components -------------------------------------------------- */
-async function loadComponent(elementId, file) {
-    const element = document.getElementById(elementId);
+function loadComponents() {
+    const basePath = getBasePath();
 
-    if (!element) return;
-
-    const response = await fetch(file);
-    const html = await response.text();
-
-    element.innerHTML = html;
-}
-
-function setActiveNavigation() {
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
-    const links = document.querySelectorAll("#main-nav a");
-
-    links.forEach(link => {
-        const linkPage = link.getAttribute("href");
-
-        if (linkPage === currentPage) {
-            link.classList.add("selected");
-        }
-    });
-}
-
-async function loadComponents() {
-    await Promise.all([
-        loadComponent('navigation-header', 'components/navigation.html'),
-        loadComponent('main-footer', 'components/footer.html')
-    ]);
-
-    setActiveNavigation();
+    $('#navigation-header').load(`${basePath}components/navigation.html`, setActiveNavigation);
+    $('#main-footer').load(`${basePath}components/footer.html`);
 }
 
 loadComponents();
+
+function setActiveNavigation() {
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+    $('#main-nav a').each(function() {
+        if ($(this).attr('href') === currentPage) {
+            $(this).addClass('selected');
+        }
+    });
+}
 
 
 /* ------------------------- Update Menu Color -------------------------------------------------- */

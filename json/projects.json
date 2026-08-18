@@ -1,0 +1,69 @@
+{
+    "projects": [
+
+        {
+            "id": "energybuddy",
+            "featured": true,
+
+            "title": "UI/UX Design - Energybuddy",
+            "year": "2025",
+
+            "shortDescription": "For this assignment I had to create an energy viewing app.",
+
+            "tags": [
+                "UI/UX",
+                "Design"
+            ],
+
+            "thumbnail": "imgs/projects/test.jpg",
+            "link": "projects/energybuddy.html",
+
+            "description": "",
+
+            "role": "UI/UX Designer",
+
+            "software": [
+                "Figma"
+            ],
+
+            "images": [
+                "imgs/projects/energybuddy/image-01.jpg",
+                "imgs/projects/energybuddy/image-02.jpg",
+                "imgs/projects/energybuddy/image-03.jpg"
+            ]
+        },
+
+        {
+            "id": "ikea-gamification",
+            "featured": false,
+
+            "title": "Ikea Gamification",
+            "year": "2025",
+
+            "shortDescription": "For this assignment I had to gamify the ikea app.",
+
+            "tags": [
+                "UI/UX",
+                "Design"
+            ],
+
+            "thumbnail": "imgs/projects/test.jpg",
+            "link": "projects/ikea.html",
+
+            "description": "",
+
+            "role": "UI/UX Designer",
+
+            "software": [
+                "Figma"
+            ],
+
+            "images": [
+                "imgs/projects/ikea-gamification/image-01.jpg",
+                "imgs/projects/ikea-gamification/image-02.jpg",
+                "imgs/projects/ikea-gamification/image-03.jpg"
+            ]
+        }
+
+    ]
+}
