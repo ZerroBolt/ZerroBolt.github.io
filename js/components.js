@@ -2,19 +2,41 @@
 function loadComponents() {
     const basePath = getBasePath();
 
-    $('#navigation-header').load(`${basePath}components/navigation.html`, setActiveNavigation);
+    $('#navigation-header').load(`${basePath}components/navigation.html`, function() {
+        setNavigationLinks();
+        setActiveNavigation();
+    });
     $('#main-footer').load(`${basePath}components/footer.html`);
 }
 
 loadComponents();
 
+// Add the 'selected' class to the current active page
 function setActiveNavigation() {
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
     $('#main-nav a').each(function() {
-        if ($(this).attr('href') === currentPage) {
-            $(this).addClass('selected');
+        const link = $(this);
+
+        if (link.attr('href') === currentPage) {
+            link.addClass('selected');
         }
+
+        // submap projects included
+        if ($('main[data-project-id]').length && link.is('[data-projects-nav]')) {
+            link.addClass('selected');
+        }
+    });
+}
+
+// (re)direct the main navigation links to the correct pages
+function setNavigationLinks() {
+    const basePath = getBasePath();
+
+    $('#main-nav a[data-root-link]').each(function() {
+        const page = $(this).attr('href');
+
+        $(this).attr('href', `${basePath}${page}`);
     });
 }
 

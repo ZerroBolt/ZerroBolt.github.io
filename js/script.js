@@ -2,25 +2,36 @@ function documentReady(projectPage = false) {
     //TODO: remove console.log
     console.log('document loaded!')
 
+    // based on the page load the correct project view
     if (projectPage) loadProject();
     else loadProjectCards();
 }
 
-//TODO: In the projects folder the navigation doesn't work
-//      Also if I get any more subfolders this als doesn't work anymore.
-//      Check if there is a better solution so everything goes from the root path
+// function to get the root path of the website
 function getBasePath() {
-    return window.location.pathname.includes('/projects/')
-        ? '../'
-        : './';
+    const path = window.location.pathname;
+    const directories = path.split('/').filter(Boolean);
+
+    //remove the filename
+    if (directories.length > 0 && directories[directories.length - 1].includes('.')) {
+        directories.pop();
+    }
+
+    return '../'.repeat(directories.length);
 }
 
 function openMainMenu() {
     document.getElementById('main-menu').hidden = false;
+    $("body").addClass("menu-open");
+
+    updateCopyrightColor();
 }
 
 function closeMainMenu() {
     document.getElementById('main-menu').hidden = true;
+    $("body").removeClass("menu-open");
+
+    updateCopyrightColor();
 }
 
 function getDateTime() {

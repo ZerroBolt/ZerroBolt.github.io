@@ -3,23 +3,24 @@
         <button onclick="openMainMenu()">
             <p>Menu</p>
             <!-- TODO: Set "Menu" Icon -->
-            <img src="" alt="open menu icon">
+            <img src="" alt="open menu">
         </button>
     </nav>
 </section>
 
-<section id="main-menu" hidden>
+<section id="main-menu" class="dark-section" hidden>
     <aside>
         <button onclick="closeMainMenu()">
-            <img src="" alt="close menu icon">
+            <!-- TODO: Set "Close Menu" Icon -->
+            <img src="" alt="close menu">
         </button>
     </aside>
     <div>
         <nav id="main-nav">
-            <a href="index.html"><mark>|</mark>Main</a>
-            <a href="about.html"><mark>|</mark>Who am I?</a>
-            <a href="projects.html"><mark>|</mark>My Projects</a>
-            <a href="contact.html"><mark>|</mark>Contact</a>
+            <a href="index.html" data-root-link><mark>|</mark>Main</a>
+            <a href="about.html" data-root-link><mark>|</mark>Who am I?</a>
+            <a href="projects.html" data-root-link data-projects-nav><mark>|</mark>My Projects</a>
+            <a href="contact.html" data-root-link><mark>|</mark>Contact</a>
         </nav>
         <nav id="socials-nav">
             <a href="https://x.com/ZerroBolt" target="_blank">X</a>

@@ -70,15 +70,6 @@ ol {
   --color-accent-dark: #334BD3;
   --color-highlight: #C9FE6E;
 
-  /* --color-dark: #1C1D20;
-  --color-dark-dark: #141517;
-  --color-light: #FFFFFF;
-  --color-blue: #455CE9;
-  --color-blue-dark: #334BD3;
-  --color-gray: #999D9E;
-  --color-lightgray: #E9EAEB;
-  --color-white: #FFFFFF; */
-  
   /* --color-border: rgba(28, 29, 32, 0.175);
   --color-border-solid: #D2D2D2;
   --color-border-light: rgba(255, 255, 255, 0.2);
@@ -90,34 +81,12 @@ ol {
   /* --animation-primary: all .5s cubic-bezier(.7, 0, .3, 1);
   --animation-fast: all .3s cubic-bezier(.7, 0, .3, 1);
   --animation-smooth: all .7s cubic-bezier(.7, 0, .3, 1);
-  --animation-slow: all .9s cubic-bezier(.7, 0, .3, 1);
+  --animation-slow: all .9s cubic-bezier(.7, 0, .3, 1); */
 
   --section-padding: clamp(5em, 21vh, 12em);
   --container-padding: clamp(2.5em, 8vw, 8em);
-  --gap-padding: clamp(1.5em, 4vw, 2.5em); */
+  --gap-padding: clamp(1.5em, 4vw, 2.5em); 
   
-}
-
-@media screen and (max-width: 1200px){
-  :root { 
-    /* --container-padding: 6vw; */
-  }
-}
-
-@media screen and (max-width: 720px){
-  :root { 
-    /* --section-padding: 12vh; */
-  }
-}
-
-@media screen and (max-width: 540px){
-
-  :root { 
-    /* --color-border: rgba(28, 29, 32, 0.225);
-    --color-border-light: rgba(255, 255, 255, 0.225);
-    --container-padding: clamp(1.25em, 4vw, 2.5em);
-    --section-padding: max(2.5em, 12vh); */
-  }
 }
 
 .color-regular {
@@ -178,18 +147,22 @@ p {
   font-size: 20px;
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
 
 #copyright {
-    position: fixed;
-    right: 0;
-    bottom: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
 
-    margin: 0;
+  margin: 0;
 
-    writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
 
-    font-family: var(--font-barlow-semi-condensed);
-    font-size: 10px;
+  font-family: var(--font-barlow-semi-condensed);
+  font-size: 10px;
 }
 
 
@@ -198,9 +171,7 @@ p {
 #open-menu-section {
   position: fixed;
   width: 100%;
-}
 
-#open-menu-section {
   display: flex;
   justify-content: flex-end;
   padding: 10px;
@@ -225,6 +196,8 @@ p {
   position: fixed;
   width: 100%;
   height: 100vh;
+
+  z-index: 10;
 }
 
 #main-menu>div {
@@ -244,6 +217,9 @@ p {
 #main-menu button {
   padding: 5px;
   background-color: var(--color-background-light);
+
+  /* line-height: 0; */
+  border-radius: 25px;
 }
 
 #main-menu a {
@@ -329,10 +305,11 @@ color: var(--color-text-light);
 #about {
   background-color: var(--color-background-dark);
   color: var(--color-text-light-grey);
+
+  padding: 25vh 0;
 }
 
 #about div {
-  padding: 25vh 0;
   margin: 0 20px; 
   display: flex;
   flex-direction: column;
