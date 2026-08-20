@@ -1,37 +1,27 @@
+/* ------------------------- General -------------------------------------------------- */
 function documentReady(projectPage = false) {
     //TODO: remove console.log
     console.log('document loaded!')
 
     // based on the page load the correct project view
-    if (projectPage) loadProject();
+    if (projectPage) loadProjectPage();
     else loadProjectCards();
+
+    updateNavigationColor();
+    updateCopyrightColor();
 }
 
-// function to get the root path of the website
+// Function to get the root path of the website
 function getBasePath() {
     const path = window.location.pathname;
     const directories = path.split('/').filter(Boolean);
 
-    //remove the filename
+    // Remove the filename
     if (directories.length > 0 && directories[directories.length - 1].includes('.')) {
         directories.pop();
     }
 
     return '../'.repeat(directories.length);
-}
-
-function openMainMenu() {
-    document.getElementById('main-menu').hidden = false;
-    $("body").addClass("menu-open");
-
-    updateCopyrightColor();
-}
-
-function closeMainMenu() {
-    document.getElementById('main-menu').hidden = true;
-    $("body").removeClass("menu-open");
-
-    updateCopyrightColor();
 }
 
 function getDateTime() {
@@ -60,15 +50,36 @@ setInterval(function() {
     document.getElementById('localTime').textContent = getDateTime();
 }, 1000);
 
-/* ------------------------- Load Projects -------------------------------------------------- */
+/* ------------------------- Menu -------------------------------------------------- */
+
+function openMainMenu() {
+    document.getElementById('main-menu').hidden = false;
+    $("body").addClass("menu-open");
+
+    updateCopyrightColor();
+}
+
+function closeMainMenu() {
+    document.getElementById('main-menu').hidden = true;
+    $("body").removeClass("menu-open");
+
+    updateCopyrightColor();
+}
+
+/* ------------------------- Load Project Cards -------------------------------------------------- */
 
 function loadProjectCards() {
     const projectList = $('.project-list');
 
     if (!projectList.length) return;
 
+    // Check if project list is set to featured only
     const featuredOnly = projectList.data('featured') === true;
     const basePath = getBasePath();
+
+    // Set amount of projects per pagination
+    const projectsPerPage = getProjectsPerPage();
+    let currentPage = 1;
 
     $.getJSON(`${basePath}json/projects.json`, function (data) {
         let projects = data.projects;
@@ -79,11 +90,64 @@ function loadProjectCards() {
             });
         }
 
-        projects.forEach(function (project) {
-            projectList.append(createProjectCard(project, basePath));
-        });
+        function displayProjects() {
+            projectList.empty();
+
+            const start = (currentPage - 1) * projectsPerPage;
+            const end = start + projectsPerPage;
+
+            const projectsToDisplay = projects.slice(start, end);
+
+            projectsToDisplay.forEach(function (project) {
+                projectList.append(createProjectCard(project, basePath));
+            });
+        }
+
+        function createPagination() {
+            const pagination = $('#project-pagination');
+
+            if (!pagination.length) return;
+
+            pagination.empty();
+
+            const totalPages = Math.ceil(
+                projects.length / projectsPerPage
+            );
+
+            if (totalPages < 2) return;
+
+            for (let page = 1; page <= totalPages; page++) {
+                const button = $(`
+                    <button type="button">
+                        ${page}
+                    </button>
+                `);
+
+                if (page === currentPage) {
+                    button.addClass('selected');
+                }
+
+                button.on('click', function () {
+                    currentPage = page;
+
+                    displayProjects();
+                    createPagination();
+
+                    // TODO: On the main page this scrolls all the way up to the top (hero)
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+
+                pagination.append(button);
+            }
+        }
+
+        displayProjects();
+        createPagination();
     });
-}
+} 
 
 function createProjectCard(project, basePath) {
     const imagePath = `${basePath}${project.thumbnail}`;
@@ -115,7 +179,58 @@ function createProjectTags(tags) {
     }).join('');
 }
 
-function loadProject() {
+const BREAKPOINTS = {
+    mobile: 768,
+    desktop: 1024
+}
+
+function getProjectsPerPage() {
+    switch (getScreenSize()) {
+        case 'mobile':
+            return 5;
+
+        case 'tablet':
+            return 8;
+
+        case 'desktop':
+            return 12;
+    }
+}
+
+function getScreenSize() {
+    const width = window.innerWidth;
+
+    if (width < BREAKPOINTS.mobile) {
+        return 'mobile';
+    }
+
+    if (width < BREAKPOINTS.desktop) {
+        return 'tablet';
+    }
+
+    return 'desktop';
+}
+
+let currentScreenSize = getScreenSize();
+
+$(window).on('resize', function () {
+    const newScreenSize = getScreenSize();
+
+    if (newScreenSize !== currentScreenSize) {
+        currentScreenSize = newScreenSize;
+
+        currentPage = 1;
+
+        //TODO: right now this gives errors
+        // THis code is necessary when the window gets resized
+        // displayProjects(currentPage);
+        // createPagination();
+    }
+});
+
+/* ------------------------- Load Project Page -------------------------------------------------- */
+
+function loadProjectPage() {
     const projectId = $('main').data('project-id');
     const basePath = getBasePath();
 

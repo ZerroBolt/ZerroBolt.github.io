@@ -35,7 +35,7 @@
 
         {
             "id": "ikea-gamification",
-            "featured": false,
+            "featured": true,
 
             "title": "Ikea Gamification",
             "year": "2025",
@@ -62,6 +62,166 @@
                 "imgs/projects/ikea-gamification/image-01.jpg",
                 "imgs/projects/ikea-gamification/image-02.jpg",
                 "imgs/projects/ikea-gamification/image-03.jpg"
+            ]
+        },
+
+        {
+            "id": "test",
+            "featured": false,
+
+            "title": "TEST",
+            "year": "2025",
+
+            "shortDescription": "For this assignment I had to create an energy viewing app.",
+
+            "tags": [
+                "UI/UX",
+                "Design"
+            ],
+
+            "thumbnail": "imgs/projects/test.jpg",
+            "link": "projects/test.html",
+
+            "description": "",
+
+            "role": "UI/UX Designer",
+
+            "software": [
+                "Figma"
+            ],
+
+            "images": [
+                "imgs/projects/test/image-01.jpg",
+                "imgs/projects/test/image-02.jpg",
+                "imgs/projects/test/image-03.jpg"
+            ]
+        },
+
+        {
+            "id": "test",
+            "featured": false,
+
+            "title": "TEST",
+            "year": "2025",
+
+            "shortDescription": "For this assignment I had to create an energy viewing app.",
+
+            "tags": [
+                "UI/UX",
+                "Design"
+            ],
+
+            "thumbnail": "imgs/projects/test.jpg",
+            "link": "projects/test.html",
+
+            "description": "",
+
+            "role": "UI/UX Designer",
+
+            "software": [
+                "Figma"
+            ],
+
+            "images": [
+                "imgs/projects/test/image-01.jpg",
+                "imgs/projects/test/image-02.jpg",
+                "imgs/projects/test/image-03.jpg"
+            ]
+        },
+
+        {
+            "id": "test",
+            "featured": false,
+
+            "title": "TEST",
+            "year": "2025",
+
+            "shortDescription": "For this assignment I had to create an energy viewing app.",
+
+            "tags": [
+                "UI/UX",
+                "Design"
+            ],
+
+            "thumbnail": "imgs/projects/test.jpg",
+            "link": "projects/test.html",
+
+            "description": "",
+
+            "role": "UI/UX Designer",
+
+            "software": [
+                "Figma"
+            ],
+
+            "images": [
+                "imgs/projects/test/image-01.jpg",
+                "imgs/projects/test/image-02.jpg",
+                "imgs/projects/test/image-03.jpg"
+            ]
+        },
+
+        {
+            "id": "test",
+            "featured": false,
+
+            "title": "TEST",
+            "year": "2025",
+
+            "shortDescription": "For this assignment I had to create an energy viewing app.",
+
+            "tags": [
+                "UI/UX",
+                "Design"
+            ],
+
+            "thumbnail": "imgs/projects/test.jpg",
+            "link": "projects/test.html",
+
+            "description": "",
+
+            "role": "UI/UX Designer",
+
+            "software": [
+                "Figma"
+            ],
+
+            "images": [
+                "imgs/projects/test/image-01.jpg",
+                "imgs/projects/test/image-02.jpg",
+                "imgs/projects/test/image-03.jpg"
+            ]
+        },
+
+        {
+            "id": "test",
+            "featured": false,
+
+            "title": "TEST",
+            "year": "2025",
+
+            "shortDescription": "For this assignment I had to create an energy viewing app.",
+
+            "tags": [
+                "UI/UX",
+                "Design"
+            ],
+
+            "thumbnail": "imgs/projects/test.jpg",
+            "link": "projects/test.html",
+
+            "description": "",
+
+            "role": "UI/UX Designer",
+
+            "software": [
+                "Figma"
+            ],
+
+            "images": [
+                "imgs/projects/test/image-01.jpg",
+                "imgs/projects/test/image-02.jpg",
+                "imgs/projects/test/image-03.jpg"
             ]
         }
 

@@ -83,9 +83,9 @@ ol {
   --animation-smooth: all .7s cubic-bezier(.7, 0, .3, 1);
   --animation-slow: all .9s cubic-bezier(.7, 0, .3, 1); */
 
-  --section-padding: clamp(5em, 21vh, 12em);
+  /* --section-padding: clamp(5em, 21vh, 12em);
   --container-padding: clamp(2.5em, 8vw, 8em);
-  --gap-padding: clamp(1.5em, 4vw, 2.5em); 
+  --gap-padding: clamp(1.5em, 4vw, 2.5em);  */
   
 }
 
@@ -109,7 +109,7 @@ ol {
 /* ------------------------- Body -------------------------------------------------- */
 
 body {
-    background-color: var(--color-background-light);
+  background-color: var(--color-background-light);
 }
 
 h1 {
@@ -418,15 +418,15 @@ color: var(--color-text-light);
 #projects {
   background-color: var(--color-background-dark);
   color: var(--color-text-light-grey);
-  padding: 25vh 0;
-}
-
-#projects>div {
-  margin: 0 20px;
+  padding: 25vh 20px;
   
   display: flex;
   flex-direction: column;
   row-gap: 50px;
+}
+
+.projects-page {
+  padding-top: 50px !important;
 }
 
 .project-list {
@@ -500,6 +500,38 @@ color: var(--color-text-light);
   background-color: var(--color-text);
   padding: 5px 10px;
   border-radius: 25px;
+}
+
+#project-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#project-pagination button {
+  color: var(--color-text-light-grey);
+  background-color: inherit;
+  width: clamp(1.5em, 8vw, 2.5em);
+  height: clamp(1.5em, 8vw, 2.5em);
+  border-radius: 5px;
+
+  transition: .15s;
+
+  font-family: var(--font-barlow-semi-condensed);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+
+  cursor: pointer;
+}
+
+#project-pagination button.selected {
+  background-color: var(--color-highlight);
+  color: var(--color-text);
+}
+
+#project-pagination button:hover {
+  background-color: var(--color-highlight);
+  color: var(--color-text);
 }
 
 
