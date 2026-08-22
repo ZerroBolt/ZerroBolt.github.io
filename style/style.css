@@ -105,6 +105,11 @@ ol {
   color: white!important;
 }
 
+#open-menu-section .light svg {
+  color: var(--color-text)!important;
+  background-color: var(--color-text-light-grey)!important;
+}
+
 
 /* ------------------------- Body -------------------------------------------------- */
 
@@ -163,6 +168,8 @@ body.menu-open {
 
   font-family: var(--font-barlow-semi-condensed);
   font-size: 10px;
+
+  z-index: 15;
 }
 
 
@@ -179,14 +186,28 @@ body.menu-open {
 
 #open-menu-section button {
   display: flex;
-  padding: 5px;
   background: unset;
   color: var(--color-text);
+
+  align-items: center;
+  gap: 5px;
 }
 
 #open-menu-section p {
   font-family: var(--font-barlow-semi-condensed);
 }
+
+#open-menu-section svg {
+  color: var(--color-text-light-grey);
+  background-color: var(--color-background-dark);
+}
+
+.icon-round {
+  height: 32px;
+  width: 32px;
+  border-radius: 25px;
+}
+
 
 
 /* ------------------------- Main Menu -------------------------------------------------- */
@@ -215,10 +236,10 @@ body.menu-open {
 }
 
 #main-menu button {
-  padding: 5px;
+  /* padding: 5px; */
   background-color: var(--color-background-light);
 
-  /* line-height: 0; */
+  line-height: 0;
   border-radius: 25px;
 }
 

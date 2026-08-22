@@ -2,7 +2,16 @@
 function loadComponents() {
     const basePath = getBasePath();
 
-    $('#navigation-header').load(`${basePath}components/navigation.html`, function() {
+    $('#navigation-header').load(`${basePath}components/navigation.html`, function(response, status, xhr) {
+        // console.log("Navigation status:", status);
+        // console.log("Navigation URL:", `${basePath}components/navigation.html`);
+        // console.log("Navigation response:", response);
+
+        // if (status === "error") {
+        //     console.error("Navigation error:", xhr.status, xhr.statusText);
+        //     return;
+        // }
+        
         setNavigationLinks();
         setActiveNavigation();
     });
