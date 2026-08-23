@@ -243,14 +243,31 @@ function loadProjectPage() {
 
         if (!project) return;
 
-        // Fill the project page
-        //TODO: check if this can be simplified (like the projectCards)
-        $('#project-title').text(project.title);
-        $('#project-year').text(project.year);
-        $('#project-description').text(project.shortDescription);
-
-        $('.project-tags').html(
-            createProjectTags(project.tags)
-        );
+        fillProjectInfo(project);
     });
+}
+
+// Fill the project page
+function fillProjectInfo(project){
+    //TODO: check if this can be simplified (like the projectCards)
+    $('#project-title').text(project.title);
+    $('#project-year').text(project.year);
+
+    $('.project-tags').html(
+        createProjectTags(project.tags)
+    );
+
+    $('#project-description').text(project.description);
+
+    $('.project-images-container-inner').html(
+        createProjectImages(project.images)
+    );
+}
+
+function createProjectImages(images) {
+    const basePath = getBasePath();
+
+    return images.map(function (image) {
+        return `<img src=${basePath}${image}>`;
+    }).join('');
 }

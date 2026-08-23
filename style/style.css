@@ -1,14 +1,15 @@
 /* ------------------------- Base reset -------------------------------------------------- */
 * {
   box-sizing: border-box;
-  font-family: var(--font-noto-sans-regular);
+  padding: 0;
+  margin: 0;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-html, body, h1, h2, h3, h4, h5, h6, p, ol, li, article {
+html, body, h1, h2, h3, h4, h5, h6, p, ol, li, article, figure {
   margin: 0;
   padding: 0;
 }
@@ -36,6 +37,12 @@ mark {
 
 ol {
   list-style-type: none;
+}
+
+hr {
+  border: unset;
+  background-color: var(--color-text);
+  padding: 1px;
 }
 
 
@@ -115,6 +122,8 @@ ol {
 
 body {
   background-color: var(--color-background-light);
+
+  min-height: 100vh;
 }
 
 h1 {
@@ -175,6 +184,11 @@ body.menu-open {
 
 /* ------------------------- Nav -------------------------------------------------- */
 
+/* #navigation-header {
+  padding: 35px 5%;
+  width: 100%;
+} */
+
 #open-menu-section {
   position: fixed;
   width: 100%;
@@ -182,6 +196,7 @@ body.menu-open {
   display: flex;
   justify-content: flex-end;
   padding: 10px;
+  z-index: 10;
 }
 
 #open-menu-section button {
@@ -623,4 +638,88 @@ footer p {
 
 footer h6 {
   color: var(--color-text-grey);
+}
+
+
+/* ------------------------- Specific Project Page -------------------------------------------------- */
+
+.project-page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* TODO: Fix header */
+.project-page #navigation-header {
+  position: relative;
+  display: flex;
+
+  /* padding: 35px 5%; */
+  padding-bottom: 50px;
+  width: 100%;
+
+  background-color: var(--color-background-dark);
+}
+
+.project-details-thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.project-details-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-fit: contain; */
+}
+
+.project-details-content {
+  position: relative;
+}
+
+.project-details-content-inner {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: min(200px, 12.5%) 0 180px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-tags mark {
+  font-family: var(--font-barlow-semi-condensed);
+  font-size: 20px;
+  color: var(--color-accent);
+  background-color: var(--color-highlight);
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+
+
+.project-images-container {
+  width: 100%;
+}
+
+.project-images-container-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.project-images-container-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+    .project-images-container-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .image-large {
+        grid-row: span 2;
+    }
 }

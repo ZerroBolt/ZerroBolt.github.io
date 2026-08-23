@@ -19,24 +19,38 @@
     <script type="text/javascript" src="../js/script.js"></script>
 </head>
 
-<body onload="documentReady(true)">
-
+<body class="project-page" onload="documentReady(true)">
     <!-- Navigation -->
-    <header id="navigation-header"></header>
+    <header class="dark-section" id="navigation-header"></header>
 
     <!-- Main -->
     <main data-project-id="energybuddy">
+        <figure class="project-details-thumbnail">
+            <img src="../imgs/projects/test.jpg" alt="project thumbnail">
+        </figure>
 
-        <section>
-            <h1 id="project-title"></h1>
+        <section class="project-details-content">
+            <div class="project-details-content-inner">
 
-            <span id="project-year"></span>
+                <header>
+                    <h2 id="project-title"></h2>
 
-            <div class="project-tags"></div>
+                    <p id="project-year"></p>
+                </header>
 
-            <p id="project-description"></p>
+                <div class="project-tags"></div>
+
+                <hr>
+
+                <p id="project-description"></p>
+                
+                <div class="project-images-container">
+                    <div class="project-images-container-inner"></div>
+                </div>
+            </div>
         </section>
 
+        <p id="copyright">Copyright &copy; Tycho Kerkhofs. All rights reserved.</p>
     </main>
 
     <!-- Footer -->
