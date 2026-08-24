@@ -175,7 +175,7 @@ function createProjectCard(project, basePath) {
 
 function createProjectTags(tags) {
     return tags.map(function (tag) {
-        return `<mark>${tag}</mark>`;
+        return `<mark class='tag-mark'>${tag}</mark>`;
     }).join('');
 }
 
@@ -249,25 +249,15 @@ function loadProjectPage() {
 
 // Fill the project page
 function fillProjectInfo(project){
+    const basePath = getBasePath();
+     
     //TODO: check if this can be simplified (like the projectCards)
     $('#project-title').text(project.title);
     $('#project-year').text(project.year);
 
+    $('#project-thumbnail').attr('src', basePath + project.thumbnail);
+
     $('.project-tags').html(
         createProjectTags(project.tags)
     );
-
-    $('#project-description').text(project.description);
-
-    $('.project-images-container-inner').html(
-        createProjectImages(project.images)
-    );
-}
-
-function createProjectImages(images) {
-    const basePath = getBasePath();
-
-    return images.map(function (image) {
-        return `<img src=${basePath}${image}>`;
-    }).join('');
 }

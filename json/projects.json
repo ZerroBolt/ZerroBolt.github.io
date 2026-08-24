@@ -2,6 +2,33 @@
     "projects": [
 
         {
+            "id": "monsterProject",
+            "featured": true,
+
+            "title": "Monster Project",
+            "year": "2025",
+            "month": "6",
+            "day": "30",
+
+            "shortDescription": "This was the last project of my second year. We had to make a \"short\" game in which the drawn monsters came to life.",
+
+            "tags": [
+                "UI/UX",
+                "Design"
+            ],
+
+            "thumbnail": "imgs/projects/monsterProject/monster_thumbnail.jpg",
+            "link": "projects/monsterProject.html",
+
+            "role": "UI/UX Designer",
+
+            "software": [
+                "Figma",
+                "Unity"
+            ]
+        },
+
+        {
             "id": "energybuddy",
             "featured": true,
 
@@ -20,210 +47,10 @@
             "thumbnail": "imgs/projects/test.jpg",
             "link": "projects/energybuddy.html",
 
-            "description": "PROJECT DESCRIPTION: In this project I was in charge of creating the UI for this monster project. This project was created in collaboration with the local foreign primary school in which the children drew monsters and we had to bring them to ‘life’ in this game. We made a game in which you would go to multiple locations on a track and you had to take pictures of the monsters to gain points. After the game ends you were also able to see a collection of the photos you took and were able to print them out yourself.",
-
             "role": "UI/UX Designer",
 
             "software": [
                 "Figma"
-            ],
-
-            "images": [
-                "imgs/projects/test.jpg",
-                "imgs/projects/test2.jpg",
-                "imgs/projects/test3.jpg"
-            ]
-        },
-
-        {
-            "id": "ikea-gamification",
-            "featured": true,
-
-            "title": "Ikea Gamification",
-            "year": "2025",
-
-            "shortDescription": "For this assignment I had to gamify the ikea app.",
-
-            "tags": [
-                "UI/UX",
-                "Design"
-            ],
-
-            "thumbnail": "imgs/projects/test.jpg",
-            "link": "projects/ikea.html",
-
-            "description": "",
-
-            "role": "UI/UX Designer",
-
-            "software": [
-                "Figma"
-            ],
-
-            "images": [
-                "imgs/projects/ikea-gamification/image-01.jpg",
-                "imgs/projects/ikea-gamification/image-02.jpg",
-                "imgs/projects/ikea-gamification/image-03.jpg"
-            ]
-        },
-
-        {
-            "id": "test",
-            "featured": false,
-
-            "title": "TEST",
-            "year": "2025",
-
-            "shortDescription": "For this assignment I had to create an energy viewing app.",
-
-            "tags": [
-                "UI/UX",
-                "Design"
-            ],
-
-            "thumbnail": "imgs/projects/test.jpg",
-            "link": "projects/test.html",
-
-            "description": "",
-
-            "role": "UI/UX Designer",
-
-            "software": [
-                "Figma"
-            ],
-
-            "images": [
-                "imgs/projects/test/image-01.jpg",
-                "imgs/projects/test/image-02.jpg",
-                "imgs/projects/test/image-03.jpg"
-            ]
-        },
-
-        {
-            "id": "test",
-            "featured": false,
-
-            "title": "TEST",
-            "year": "2025",
-
-            "shortDescription": "For this assignment I had to create an energy viewing app.",
-
-            "tags": [
-                "UI/UX",
-                "Design"
-            ],
-
-            "thumbnail": "imgs/projects/test.jpg",
-            "link": "projects/test.html",
-
-            "description": "",
-
-            "role": "UI/UX Designer",
-
-            "software": [
-                "Figma"
-            ],
-
-            "images": [
-                "imgs/projects/test/image-01.jpg",
-                "imgs/projects/test/image-02.jpg",
-                "imgs/projects/test/image-03.jpg"
-            ]
-        },
-
-        {
-            "id": "test",
-            "featured": false,
-
-            "title": "TEST",
-            "year": "2025",
-
-            "shortDescription": "For this assignment I had to create an energy viewing app.",
-
-            "tags": [
-                "UI/UX",
-                "Design"
-            ],
-
-            "thumbnail": "imgs/projects/test.jpg",
-            "link": "projects/test.html",
-
-            "description": "",
-
-            "role": "UI/UX Designer",
-
-            "software": [
-                "Figma"
-            ],
-
-            "images": [
-                "imgs/projects/test/image-01.jpg",
-                "imgs/projects/test/image-02.jpg",
-                "imgs/projects/test/image-03.jpg"
-            ]
-        },
-
-        {
-            "id": "test",
-            "featured": false,
-
-            "title": "TEST",
-            "year": "2025",
-
-            "shortDescription": "For this assignment I had to create an energy viewing app.",
-
-            "tags": [
-                "UI/UX",
-                "Design"
-            ],
-
-            "thumbnail": "imgs/projects/test.jpg",
-            "link": "projects/test.html",
-
-            "description": "",
-
-            "role": "UI/UX Designer",
-
-            "software": [
-                "Figma"
-            ],
-
-            "images": [
-                "imgs/projects/test/image-01.jpg",
-                "imgs/projects/test/image-02.jpg",
-                "imgs/projects/test/image-03.jpg"
-            ]
-        },
-
-        {
-            "id": "test",
-            "featured": false,
-
-            "title": "TEST",
-            "year": "2025",
-
-            "shortDescription": "For this assignment I had to create an energy viewing app.",
-
-            "tags": [
-                "UI/UX",
-                "Design"
-            ],
-
-            "thumbnail": "imgs/projects/test.jpg",
-            "link": "projects/test.html",
-
-            "description": "",
-
-            "role": "UI/UX Designer",
-
-            "software": [
-                "Figma"
-            ],
-
-            "images": [
-                "imgs/projects/test/image-01.jpg",
-                "imgs/projects/test/image-02.jpg",
-                "imgs/projects/test/image-03.jpg"
             ]
         }
 
