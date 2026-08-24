@@ -161,6 +161,10 @@ p {
   font-size: 20px;
 }
 
+a {
+  font-family: var(--font-montserrat);
+}
+
 body.menu-open {
     overflow: hidden;
 }
@@ -280,7 +284,6 @@ body.menu-open {
 
 #main-nav a {
   font-size: 45px;
-  color: var(--color-text-light-80);
   display: flex;
   column-gap: 20px;
 }
@@ -689,6 +692,12 @@ footer h6 {
 
 .project-details-content-inner p {
   font-size: 18px;
+}
+
+.project-details-content-inner a {
+  font-size: 18px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
 }
 
 .project-tags {

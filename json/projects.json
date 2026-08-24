@@ -32,19 +32,20 @@
             "id": "energybuddy",
             "featured": true,
 
-            "title": "UI/UX Design - Energybuddy",
+            "title": "Energybuddy",
             "year": "2025",
             "month": "11",
             "day": "25",
 
-            "shortDescription": "For this assignment I had to create an energy viewing app.",
+            "shortDescription": "For this assignment I had build a Hi-Fi prototype of an energy dashboard designed for a shared student household.",
 
             "tags": [
                 "UI/UX",
-                "Design"
+                "Design",
+                "Hi-Fi Prototype"
             ],
 
-            "thumbnail": "imgs/projects/test.jpg",
+            "thumbnail": "imgs/projects/energybuddy/thumbnail.jpg",
             "link": "projects/energybuddy.html",
 
             "role": "UI/UX Designer",
