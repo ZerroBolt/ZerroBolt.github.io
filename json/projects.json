@@ -53,6 +53,29 @@
             "software": [
                 "Figma"
             ]
+        },
+
+        {
+            "id": "languageSchoolJapan",
+            "featured": true,
+
+            "title": "EF Japan",
+            "year": "2026",
+            "month": "11",
+            "day": "25",
+
+            "shortDescription": "For my Minor I chose to study the Japanese language in Japan with EF.",
+
+            "tags": [
+                "Japanese",
+                "Language study",
+                "EF"
+            ],
+
+            "thumbnail": "imgs/projects/languageSchoolJapan/thumbnail.jpg",
+            "link": "projects/languageSchoolJapan.html",
+
+            "role": "Language Student"
         }
 
     ]
