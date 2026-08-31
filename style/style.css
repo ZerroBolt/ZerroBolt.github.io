@@ -867,9 +867,10 @@ footer h6 {
 }
 
 .project-gallery img {
-  transition: transform 0.25s ease;
+  transition: .3s ease;
 }
 
 .project-gallery figure:hover img {
     transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
