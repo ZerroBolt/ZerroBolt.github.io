@@ -76,6 +76,33 @@
             "link": "projects/languageSchoolJapan.html",
 
             "role": "Language Student"
+        },
+
+        {
+            "id": "malRedesign",
+            "featured": false,
+
+            "title": "Redesign MyAnimeList",
+            "year": "2023",
+            "month": "xx",
+            "day": "xx",
+
+            "shortDescription": "For the subject \"UI/UX Design\" I had to redesign 2 pages of an already existing website of my choice.",
+
+            "tags": [
+                "UI/UX",
+                "Design",
+                "Anime"
+            ],
+
+            "thumbnail": "imgs/projects/malRedesign/thumbnail.png",
+            "link": "projects/malRedesign.html",
+
+            "role": "UI/UX Designer",
+            
+            "software": [
+                "Figma"
+            ]
         }
 
     ]

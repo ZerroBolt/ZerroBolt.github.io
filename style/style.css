@@ -809,6 +809,10 @@ footer h6 {
   color: var(--color-accent);
 }
 
+.project-details-content-inner a:hover {
+  color: var(--color-accent-dark);
+}
+
 .project-tags {
   margin-top: 2em;
   display: flex;
