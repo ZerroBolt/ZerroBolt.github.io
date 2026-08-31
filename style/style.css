@@ -66,6 +66,7 @@ hr {
 
   --color-background-light: #F9F7F4;
   --color-background-dark: #1C1D21;
+  --color-background-darker: #111;
 
   --color-text: #1F241F;
   --color-text-grey: #6B6B6B;
@@ -120,24 +121,28 @@ hr {
 
 /* ------------------------- Body -------------------------------------------------- */
 
+::selection {
+  color: var(--color-text-light);
+  background: var(--color-accent);
+}
+
 body {
   background-color: var(--color-background-light);
 
   min-height: 100vh;
+  width: 100%;
 }
 
 h1 {
   font-family: var(--font-montserrat);
   font-weight: var(--font-weight-regular);
-
-  font-size: 64px;
 }
 
 h2 {
   font-family: var(--font-montserrat);
   font-weight: var(--font-weight-regular);
 
-  font-size: 40px;
+  font-size: clamp(40px, 6vw, 68px);
 }
 
 h3 {
@@ -166,7 +171,16 @@ a {
 }
 
 body.menu-open {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1300px;
+  /* padding: min(200px, 12.5%) 0 180px; */
+  display: flex;
+  flex-direction: column;
 }
 
 .tag-mark {
@@ -179,7 +193,7 @@ body.menu-open {
 }
 
 
-#copyright {
+.copyright {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -189,7 +203,7 @@ body.menu-open {
   writing-mode: vertical-rl;
 
   font-family: var(--font-barlow-semi-condensed);
-  font-size: 10px;
+  font-size: clamp(10px, 2vw, 16px);
 
   z-index: 15;
 }
@@ -201,6 +215,10 @@ body.menu-open {
   padding: 35px 5%;
   width: 100%;
 } */
+
+#navigation-header button {
+  cursor: pointer;
+}
 
 #open-menu-section {
   position: fixed;
@@ -247,6 +265,7 @@ body.menu-open {
   height: 100vh;
 
   z-index: 10;
+  transition: .3s;
 }
 
 #main-menu>div {
@@ -311,10 +330,54 @@ color: var(--color-text-light);
   font-size: 20px;
 }
 
+@media (min-width: 768px) {
+  #main-menu {
+    height: auto;
+    width: 340px;
+    right: 24px;
+    top: 18px;
+    border-radius: 25px;
+
+    padding: 30px;
+    padding-top: 100px;
+    padding-bottom: 60px;
+
+    background-color: var(--color-background-darker);
+
+    transition: .3s;
+  }
+
+  #main-menu a:hover {
+    color: var(--color-text-light);
+  }
+
+  #main-menu aside {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  #main-menu>div {
+    margin: unset;
+    justify-content: unset;
+    height: auto;
+  }
+
+  #main-nav a {
+    font-size: 36px;
+  }
+
+  #socials-nav {
+    margin: unset;
+    margin-top: 100px;
+    grid-template-columns: unset;
+  }
+}
+
 
 /* ------------------------- Hero -------------------------------------------------- */
 
-#hero {
+.hero {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -325,20 +388,25 @@ color: var(--color-text-light);
   color: var(--color-accent);
 }
 
-#hero-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 30px;
-
-    color: var(--color-text-grey);
+.hero h1 {
+  font-size: clamp(64px, 8vw, 128px);
 }
 
-#hero-btn {
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+
+  color: var(--color-text-grey);
+}
+
+.hero-btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  row-gap: 10px;
+  gap: 5px;
+  align-items: center;
 
   background-color: var(--color-background-dark);
   border-radius: 25px;
@@ -355,12 +423,12 @@ color: var(--color-text-light);
   color: var(--color-text-light-grey);
 
   padding: 25vh 0;
+  min-height: 125vh;
+  display: flex;
+  align-items: center;
 }
 
 #about div {
-  margin: 0 20px; 
-  display: flex;
-  flex-direction: column;
   text-align: center;
   justify-content: center;
   row-gap: 15px;
@@ -382,6 +450,9 @@ color: var(--color-text-light);
 
 #journey {
   padding: 25vh 0;
+  min-height: 125vh;
+  display: flex;
+  align-items: center;
 }
 
 #journey h2 {
@@ -389,10 +460,6 @@ color: var(--color-text-light);
 }
 
 #journey>div {
-  margin: 0 20px;
-  
-  display: flex;
-  flex-direction: column;
   row-gap: 40px;
 }
 
@@ -463,14 +530,17 @@ color: var(--color-text-light);
 
 /* ------------------------- Projects -------------------------------------------------- */
 
-#projects {
+.project-wrapper {
   background-color: var(--color-background-dark);
   color: var(--color-text-light-grey);
-  padding: 25vh 20px;
-  
+  padding: 25vh 0;
+  min-height: 125vh;
   display: flex;
-  flex-direction: column;
-  row-gap: 50px;
+  align-items: center;
+}
+
+.project-wrapper>div {
+  gap: 50px;
 }
 
 .projects-page {
@@ -478,9 +548,22 @@ color: var(--color-text-light);
 }
 
 .project-list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1600px) {
+  .project-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Project card */
@@ -489,6 +572,19 @@ color: var(--color-text-light);
   display: block;
   color: inherit;
   text-decoration: none;
+}
+
+.project-card {
+  transition: .3s;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.project-card:hover {
+  background-color: var(--color-text);
+
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* Image */
@@ -510,13 +606,13 @@ color: var(--color-text-light);
 }
 
 .project-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    /* CHeck if I still want flex-wrap here (puts the tags underneath the project title) */
-    flex-wrap: wrap;
-    gap: 5px;
+  /* CHeck if I still want flex-wrap here (puts the tags underneath the project title) */
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .project-card-content {
@@ -587,10 +683,6 @@ color: var(--color-text-light);
 }
 
 #contact>div {
-  margin: 0 20px;
-
-  display: flex;
-  flex-direction: column;
   row-gap: 200px;
 }
 
@@ -603,7 +695,7 @@ color: var(--color-text-light);
   grid-column: 1 / -1;
 }
 
-.contact-nav a{
+.contact-nav a {
   text-decoration: none;
   color: inherit;
 
@@ -614,6 +706,15 @@ color: var(--color-text-light);
   padding: 35px 0;
 
   text-align: center;
+
+  transition: .3s;
+}
+
+.contact-nav a:hover {
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+
+  transition: .3s;
 }
 
 
@@ -651,6 +752,11 @@ footer h6 {
   flex-direction: column;
 }
 
+.projects-page {
+  min-height: 100vh;
+  padding: 0;
+}
+
 /* TODO: Fix header */
 .project-page #navigation-header {
   position: relative;
@@ -667,6 +773,9 @@ footer h6 {
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;
+
+  max-width: 1300px;
+  margin: 0 auto;
 }
 .project-details-thumbnail img {
   width: 100%;
@@ -683,7 +792,7 @@ footer h6 {
   width: 90%;
   margin: 0 auto;
   max-width: 1300px;
-  padding: min(200px, 12.5%) 0 180px;
+  padding: min(100px, 12.5%) 0 180px;
 
   display: flex;
   flex-direction: column;
@@ -742,4 +851,25 @@ footer h6 {
 
 .project-details-body p {
   margin-top: 2.5em;
+}
+
+.project-gallery {
+  margin-top: 2.5em;
+  width: 100%;
+  columns: 3 300px;
+  column-gap: 24px;
+}
+
+.project-gallery figure {
+  width: 100%;
+  margin: 0 0 24px;
+  break-inside: avoid;
+}
+
+.project-gallery img {
+  transition: transform 0.25s ease;
+}
+
+.project-gallery figure:hover img {
+    transform: scale(1.03);
 }

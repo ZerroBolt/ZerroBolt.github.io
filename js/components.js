@@ -88,7 +88,7 @@ function updateNavigationColor() {
 $(window).on('scroll resize', updateNavigationColor);
 
 function updateCopyrightColor() {
-    const copyright = $('#copyright');
+    const copyright = $('.copyright');
 
     if (!copyright.length) return;
 

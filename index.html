@@ -27,23 +27,21 @@
 
     <!-- Main -->
     <main>
-        <section id="hero">
-            <!-- TODO: put section content inside the header (everyting can be inside the header / don't need a separate section element) -->
-            <header>
-                <h1>Tycho Kerkhofs</h1>
-            </header>
-            <section id="hero-info">
+        <header class="hero content-wrapper">
+            <h1>Tycho Kerkhofs</h1>
+
+            <div class="hero-info">
                 <p>I Create digital experiences through design & technology.</p>
-                <button id="hero-btn">
-                    <!-- TODO: Set "Explore" Icon -->
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevrons-down-icon lucide-chevrons-down"><path d="m7 6 5 5 5-5"/><path d="m7 13 5 5 5-5"/></svg> -->
+                <a class="hero-btn" href="#about">
                     <p>Explore</p>
-                </button>
-            </section>
-        </section>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevrons-down-icon lucide-chevrons-down"><path d="m7 6 5 5 5-5"/><path d="m7 13 5 5 5-5"/></svg>
+                </a>
+            </div>
+        </header>
+            
 
         <section id="about" class="dark-section">
-            <div>
+            <div class="content-wrapper">
                 <h2>Hi there!</h2>
 
                 <p>
@@ -63,7 +61,7 @@
         </section>
 
         <section id="journey">
-            <div>
+            <div class="content-wrapper">
                 <h2>My Journey</h2>
 
                 <ol class="timeline">
@@ -143,18 +141,20 @@
             </div>
         </section>
 
-        <section id="projects" class="dark-section">
+        <section class="project-wrapper dark-section">
+            <div class="content-wrapper">
 
-            <h2>Featured Projects</h2>
-            
-            <div class="project-list" data-featured="true"></div>
+                <h2>Featured Projects</h2>
+                
+                <div class="project-list" data-featured="true"></div>
 
-            <nav id="project-pagination" aria-label="Project pages"></nav>
+                <nav id="project-pagination" aria-label="Project pages"></nav>
 
+            </div>
         </section>
 
         <section id="contact">
-            <div>
+            <div class="content-wrapper">
                 <h2>Let's get in Touch</h2>
                 <div>
                     <p>Let's work together!</p>
@@ -170,7 +170,7 @@
             
         </section>
 
-        <p id="copyright">Copyright &copy; Tycho Kerkhofs. All rights reserved.</p>
+        <p class="copyright">Copyright &copy; Tycho Kerkhofs. All rights reserved.</p>
     </main>
 
     <!-- Footer -->

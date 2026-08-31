@@ -250,8 +250,7 @@ function loadProjectPage() {
 // Fill the project page
 function fillProjectInfo(project){
     const basePath = getBasePath();
-     
-    //TODO: check if this can be simplified (like the projectCards)
+    
     $('#project-title').text(project.title);
     $('#project-year').text(project.year);
 
