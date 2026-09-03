@@ -864,6 +864,15 @@ footer h6 {
   column-gap: 24px;
 }
 
+.column-count-1 {
+  columns: 1;
+}
+.column-count-1 img {
+  max-height: 90vh;
+  width: auto;
+  margin: 0 auto;
+}
+
 .project-gallery figure {
   width: 100%;
   margin: 0 0 24px;
@@ -875,8 +884,8 @@ footer h6 {
 }
 
 .project-gallery figure:hover img {
-    transform: scale(1.03);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 

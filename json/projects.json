@@ -130,6 +130,32 @@
             "software": [
                 "Ableton"
             ]
+        },
+
+        {
+            "id": "moviePoster",
+            "featured": false,
+
+            "title": "Movie Poster",
+            "year": "2023",
+            "month": "xx",
+            "day": "xx",
+
+            "shortDescription": "For the subject “Imagery” we had to make a movie poster with ourselves as the main subject in Photoshop.",
+
+            "tags": [
+                "Photoshop",
+                "Design"
+            ],
+
+            "thumbnail": "imgs/projects/moviePoster/movie_poster.png",
+            "link": "projects/moviePoster.html",
+
+            "role": "Designer",
+            
+            "software": [
+                "Photoshop"
+            ]
         }
 
     ]
