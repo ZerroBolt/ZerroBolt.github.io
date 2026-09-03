@@ -103,6 +103,33 @@
             "software": [
                 "Figma"
             ]
+        },
+
+        {
+            "id": "trailerSoundDesign",
+            "featured": false,
+
+            "title": "Sound Design Horror Trailer",
+            "year": "2024",
+            "month": "xx",
+            "day": "xx",
+
+            "shortDescription": "For my first portfolio assignment I wanted to learn more about sound design.",
+
+            "tags": [
+                "Sound Design",
+                "Trailer",
+                "Horror"
+            ],
+
+            "thumbnail": "imgs/projects/soundDesign/thumbnail.jpg",
+            "link": "projects/trailerSoundDesign.html",
+
+            "role": "Designer",
+            
+            "software": [
+                "Ableton"
+            ]
         }
 
     ]
