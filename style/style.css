@@ -873,6 +873,10 @@ footer h6 {
   margin: 0 auto;
 }
 
+.column-count-2 {
+  columns: 2 300px;
+}
+
 .project-gallery figure {
   width: 100%;
   margin: 0 0 24px;
