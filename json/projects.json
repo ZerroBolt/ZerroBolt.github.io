@@ -156,6 +156,33 @@
             "software": [
                 "Photoshop"
             ]
+        },
+
+        {
+            "id": "treeHouseModel",
+            "featured": false,
+
+            "title": "3D Model Of A Tree House",
+            "year": "2024",
+            "month": "xx",
+            "day": "xx",
+
+            "shortDescription": "I created an abandoned mechanical tree house as my final assignment for my 3D modelling class.",
+
+            "tags": [
+                "3D Model",
+                "Design"
+            ],
+
+            "thumbnail": "imgs/projects/treeHouse/thumbnail.png",
+            "link": "projects/treeHouseModel.html",
+
+            "role": "Designer",
+            
+            "software": [
+                "Autodesk Maya",
+                "Substance 3D Painter"
+            ]
         }
 
     ]
