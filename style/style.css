@@ -149,7 +149,7 @@ h3 {
   font-family: var(--font-noto-sans-regular);
   font-weight: var(--font-weight-bold);
   
-  font-size: 20px;
+  font-size: clamp(20px, 3vw, 24px);
 }
 
 h6 {
@@ -163,7 +163,7 @@ p {
   font-family: var(--font-noto-sans-regular);
   font-weight: var(--font-weight-regular);
 
-  font-size: 20px;
+  font-size: clamp(20px, 2vw, 22px);
 }
 
 a {
@@ -222,7 +222,9 @@ body.menu-open {
 
 #open-menu-section {
   position: fixed;
-  width: 100%;
+  /* width: 100%; */
+  right: 10px;
+  top: 10px;
 
   display: flex;
   justify-content: flex-end;
@@ -254,6 +256,13 @@ body.menu-open {
   border-radius: 25px;
 }
 
+@media (min-width: 768px) {
+  #open-menu-section {
+    right: 24px;
+    top: 18px;
+  }
+}
+
 
 
 /* ------------------------- Main Menu -------------------------------------------------- */
@@ -280,10 +289,14 @@ body.menu-open {
   display: flex;
   justify-content: flex-end;
   padding: 10px;
+
+  position: fixed;
+  top: 10px;
+  right: 10px;
 }
 
 #main-menu button {
-  /* padding: 5px; */
+  padding: 10px;
   background-color: var(--color-background-light);
 
   line-height: 0;
@@ -353,8 +366,12 @@ color: var(--color-text-light);
 
   #main-menu aside {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    /* top: 20px;
+    right: 20px; */
+  }
+
+  #main-menu aside button {
+    padding: 0;
   }
 
   #main-menu>div {
@@ -431,18 +448,18 @@ color: var(--color-text-light);
 #about div {
   text-align: center;
   justify-content: center;
-  row-gap: 15px;
+  gap: 1.5em;
 }
 
 #about p {
-  font-size: 18px;
+  font-size: clamp(18px, 2vw, 22px);
 }
 
 #about mark {
   color: var(--color-highlight);
   font-family: var(--font-barlow-semi-condensed);
   font-weight: var(--font-weight-semibold);
-  font-size: 20px;
+  font-size: clamp(20px, 2vw, 24px);
 }
 
 
@@ -472,7 +489,13 @@ color: var(--color-text-light);
 /* TODO: check if grid isn't a better option here. (the titles are now not really centered horizontally (check "NOW - Last Big project.." item)) */
 .timeline-item {
   display: flex;
-  column-gap: 15px;
+  gap: 15px;
+}
+
+@media (min-width: 768px) {
+  .timeline-item {
+    gap: 30px;
+  }
 }
 
 .timeline-content {
@@ -483,14 +506,14 @@ color: var(--color-text-light);
 
 .timeline-content p {
   font-family: var(--font-noto-sans-regular);
-  font-size: 18px;
+  font-size: clamp(18px, 2vw, 22px);
 
   color: var(--color-text-grey);
 }
 
 .timeline-item time {
   font-family: var(--font-barlow-semi-condensed);
-  font-size: 24px;
+  font-size: clamp(24px, 4vw, 28px);
 
   color: var(--color-text);
 }
@@ -624,7 +647,7 @@ color: var(--color-text-light);
 
 .project-card-content p {
   color: var(--color-text-light-80);
-  font-size: 18px;
+  font-size: clamp(18px, 2vw, 20px);
 }
 
 .project-card-tags {
@@ -744,6 +767,13 @@ footer h6 {
   color: var(--color-text-grey);
 }
 
+@media (min-width: 768px) {
+  footer {
+    justify-content: flex-start;
+    gap: 50px;
+  }
+}
+
 
 /* ------------------------- Specific Project Page -------------------------------------------------- */
 
@@ -800,7 +830,7 @@ footer h6 {
 }
 
 .project-details-content-inner p {
-  font-size: 18px;
+  font-size: clamp(18px, 2vw, 22px);
 }
 
 .project-details-content-inner a {
@@ -912,4 +942,14 @@ footer h6 {
   min-height: 200px;
   border: none;
   display: block;
+}
+
+
+.back-button {
+  position: fixed;
+  top: 10px;
+  left: 15px;
+  padding: 7px;
+  border-radius: 20px;
+  cursor: pointer;
 }
