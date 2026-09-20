@@ -793,10 +793,16 @@ footer h6 {
   display: flex;
 
   /* padding: 35px 5%; */
-  padding-bottom: 50px;
+  padding-bottom: 65px;
   width: 100%;
 
   background-color: var(--color-background-dark);
+}
+
+@media (min-width: 768px) {
+  .project-page #navigation-header {
+    padding-bottom: 85px;
+  }
 }
 
 .project-details-thumbnail {
@@ -946,10 +952,29 @@ footer h6 {
 
 
 .back-button {
-  position: fixed;
-  top: 10px;
+  position: absolute;
+  top: 15px;
   left: 15px;
   padding: 7px;
   border-radius: 20px;
   cursor: pointer;
+  border: 2px solid var(--color-text-light);
+  background: none;
+  color: var(--color-text-light);
+  font-family: var(--font-montserrat);
+  font-weight: var(--font-weight-semibold);
+
+  transition: .3s;
+}
+
+.back-button:hover {
+  color: var(--color-text);
+  background-color: var(--color-text-light);
+}
+
+@media (min-width: 768px) {
+  .back-button {
+    top: 25px;
+    left: 25px;
+  }
 }
