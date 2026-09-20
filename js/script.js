@@ -1,8 +1,6 @@
 /* ------------------------- General -------------------------------------------------- */
 function documentReady(projectPage = false) {
-    //TODO: remove console.log
-    console.log('document loaded!')
-
+    
     // based on the page load the correct project view
     if (projectPage) loadProjectPage();
     else loadProjectCards();

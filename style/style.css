@@ -216,6 +216,41 @@ body.menu-open {
   width: 100%;
 } */
 
+/* .hero-wrapper hr{
+  position: absolute;
+  width: 90vw;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-text);
+  padding: .5px;
+} */
+
+/* .hero-wrapper {
+  background-image: url("/imgs/background.png");
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.9);
+  background-blend-mode: lighten;
+} */
+
+.hero-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  background-image: url("/imgs/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .1;
+  height: 85%;
+  width: 85%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px 20px white inset;
+  border-radius: 20%;
+  filter: blur(1px);
+}
+
 #navigation-header button {
   cursor: pointer;
 }
@@ -431,6 +466,11 @@ color: var(--color-text-light);
   color: var(--color-text-light-grey);
 
   padding: 5px 15px;
+
+  transition: .3s;
+}
+.hero-btn:hover{
+  scale: 1.1;
 }
 
 /* ------------------------- About me -------------------------------------------------- */
@@ -439,13 +479,14 @@ color: var(--color-text-light);
   background-color: var(--color-background-dark);
   color: var(--color-text-light-grey);
 
-  padding: 25vh 0;
+  /* padding: 25vh 0; */
   min-height: 125vh;
   display: flex;
   align-items: center;
 }
 
 #about div {
+  padding: 30vh 0;
   text-align: center;
   justify-content: center;
   gap: 1.5em;
@@ -566,6 +607,17 @@ color: var(--color-text-light);
   gap: 50px;
 }
 
+/* .project-wrapper .content-wrapper {
+  max-width: unset;
+}
+.project-wrapper .project-list {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+.project-wrapper h2 {
+  margin: 0 auto;
+} */
+
 .projects-page {
   padding-top: 50px !important;
 }
@@ -601,6 +653,7 @@ color: var(--color-text-light);
   transition: .3s;
   border-radius: 10px;
   padding: 10px;
+  outline: 0px solid var(--color-highlight);
 }
 
 .project-card:hover {
@@ -608,6 +661,7 @@ color: var(--color-text-light);
 
   transform: scale(1.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  outline: 2px solid var(--color-highlight);
 }
 
 /* Image */
@@ -905,7 +959,7 @@ footer h6 {
 }
 .column-count-1 img {
   max-height: 90vh;
-  width: auto;
+  width: auto!important;
   margin: 0 auto;
 }
 
