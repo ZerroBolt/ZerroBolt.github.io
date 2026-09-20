@@ -1,0 +1,46 @@
+<section id="open-menu-section">
+    <nav>
+        <button onclick="openMainMenu()">
+            <p>Menu</p>
+
+            <svg class="icon-round" viewBox="0 0 40 40">
+                <rect x="5" y="18" width="16" height="4" rx="2" fill="currentColor"/>
+                <rect x="24" y="18" width="4" height="4" rx="2" fill="currentColor"/>
+                <rect x="31" y="18" width="4" height="4" rx="2" fill="currentColor"/>
+            </svg>
+
+        </button>
+    </nav>
+</section>
+
+<section id="main-menu" class="dark-section" hidden>
+    <aside>
+        <button onclick="closeMainMenu()">
+            
+            <svg class="icon-round" viewBox="0 0 40 40">
+                <rect x="9.82861" y="7" width="32" height="4" rx="2" transform="rotate(45 9.82861 7)" fill="#1F241F"/>
+                <rect x="7" y="29.6274" width="32" height="4" rx="2" transform="rotate(-45 7 29.6274)" fill="#1F241F"/>
+            </svg>
+
+        </button>
+    </aside>
+    <div>
+        <nav id="main-nav">
+            <!-- Use 'data-root-link' so every page knows it should use the root path -->
+            <a href="index.html" data-root-link><mark>|</mark>Main</a>
+            <!-- <a href="about.html" data-root-link><mark>|</mark>Who am I?</a> -->
+            <a href="projects.html" data-root-link data-projects-nav><mark>|</mark>My Projects</a>
+            <!-- <a href="contact.html" data-root-link><mark>|</mark>Contact</a> -->
+        </nav>
+        <nav id="socials-nav">
+            <a href="https://x.com/ZerroBolt" target="_blank">X</a>
+            <a href="https://www.instagram.com/tychokerkhofs/" target="_blank">Instagram</a>
+            <a href="https://github.com/ZerroBolt" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/tycho-k/" target="_blank">Linked-In</a>
+        </nav>
+    </div>
+</section>
+
+<section>
+    <button class="back-button" onclick="history.back()"><< To Index</button>
+</section>

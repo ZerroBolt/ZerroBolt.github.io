@@ -1,0 +1,189 @@
+{
+    "projects": [
+
+        {
+            "id": "monsterProject",
+            "featured": true,
+
+            "title": "Monster Project",
+            "year": "2025",
+            "month": "6",
+            "day": "30",
+
+            "shortDescription": "This was the last project of my second year. We had to make a \"short\" game in which the drawn monsters came to life.",
+
+            "tags": [
+                "UI/UX",
+                "Design"
+            ],
+
+            "thumbnail": "imgs/projects/monsterProject/monster_thumbnail.jpg",
+            "link": "projects/monsterProject.html",
+
+            "role": "UI/UX Designer",
+
+            "software": [
+                "Figma",
+                "Unity"
+            ]
+        },
+
+        {
+            "id": "energybuddy",
+            "featured": true,
+
+            "title": "Energybuddy",
+            "year": "2025",
+            "month": "11",
+            "day": "25",
+
+            "shortDescription": "For this assignment I had build a Hi-Fi prototype of an energy dashboard designed for a shared student household.",
+
+            "tags": [
+                "UI/UX",
+                "Design",
+                "Hi-Fi Prototype"
+            ],
+
+            "thumbnail": "imgs/projects/energybuddy/thumbnail.jpg",
+            "link": "projects/energybuddy.html",
+
+            "role": "UI/UX Designer",
+
+            "software": [
+                "Figma"
+            ]
+        },
+
+        {
+            "id": "languageSchoolJapan",
+            "featured": true,
+
+            "title": "EF Japan",
+            "year": "2026",
+            "month": "11",
+            "day": "25",
+
+            "shortDescription": "For my Minor I chose to study the Japanese language in Japan with EF.",
+
+            "tags": [
+                "Japanese",
+                "Language study",
+                "EF"
+            ],
+
+            "thumbnail": "imgs/projects/languageSchoolJapan/thumbnail.jpg",
+            "link": "projects/languageSchoolJapan.html",
+
+            "role": "Language Student"
+        },
+
+        {
+            "id": "malRedesign",
+            "featured": false,
+
+            "title": "Redesign MyAnimeList",
+            "year": "2023",
+            "month": "xx",
+            "day": "xx",
+
+            "shortDescription": "For the subject \"UI/UX Design\" I had to redesign 2 pages of an already existing website of my choice.",
+
+            "tags": [
+                "UI/UX",
+                "Design",
+                "Anime"
+            ],
+
+            "thumbnail": "imgs/projects/malRedesign/thumbnail.png",
+            "link": "projects/malRedesign.html",
+
+            "role": "UI/UX Designer",
+            
+            "software": [
+                "Figma"
+            ]
+        },
+
+        {
+            "id": "trailerSoundDesign",
+            "featured": false,
+
+            "title": "Sound Design Horror Trailer",
+            "year": "2024",
+            "month": "xx",
+            "day": "xx",
+
+            "shortDescription": "For my first portfolio assignment I wanted to learn more about sound design.",
+
+            "tags": [
+                "Sound Design",
+                "Trailer",
+                "Horror"
+            ],
+
+            "thumbnail": "imgs/projects/soundDesign/thumbnail.jpg",
+            "link": "projects/trailerSoundDesign.html",
+
+            "role": "Designer",
+            
+            "software": [
+                "Ableton"
+            ]
+        },
+
+        {
+            "id": "moviePoster",
+            "featured": false,
+
+            "title": "Movie Poster",
+            "year": "2023",
+            "month": "xx",
+            "day": "xx",
+
+            "shortDescription": "For the subject “Imagery” we had to make a movie poster with ourselves as the main subject in Photoshop.",
+
+            "tags": [
+                "Photoshop",
+                "Design"
+            ],
+
+            "thumbnail": "imgs/projects/moviePoster/movie_poster.png",
+            "link": "projects/moviePoster.html",
+
+            "role": "Designer",
+            
+            "software": [
+                "Photoshop"
+            ]
+        },
+
+        {
+            "id": "treeHouseModel",
+            "featured": false,
+
+            "title": "3D Model Of A Tree House",
+            "year": "2024",
+            "month": "xx",
+            "day": "xx",
+
+            "shortDescription": "I created an abandoned mechanical tree house as my final assignment for my 3D modelling class.",
+
+            "tags": [
+                "3D Model",
+                "Design"
+            ],
+
+            "thumbnail": "imgs/projects/treeHouse/thumbnail.png",
+            "link": "projects/treeHouseModel.html",
+
+            "role": "Designer",
+            
+            "software": [
+                "Autodesk Maya",
+                "Substance 3D Painter"
+            ]
+        }
+
+    ]
+}

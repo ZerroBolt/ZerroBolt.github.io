@@ -1,143 +1,260 @@
-let form;
+/* ------------------------- General -------------------------------------------------- */
+function documentReady(projectPage = false) {
+    
+    // based on the page load the correct project view
+    if (projectPage) loadProjectPage();
+    else loadProjectCards();
 
-function documentReady() {
-    const hamburger = $('.hamburger');
-    const navLinks = $('.nav-links');
-
-    form = document.getElementById('my-contact-form');
-    form.addEventListener('submit', formHandler);
-
-    // Toggle menu when hamburger clicked
-    hamburger.on('click', function (e) {
-        e.stopPropagation(); // prevent event bubbling up to document
-        navLinks.toggleClass('active');
-    });
-
-    // Close menu when clicking on a nav link
-    navLinks.find('a').on('click', function () {
-        navLinks.removeClass('active');
-    });
-
-    $(document).on('click', function (e) {
-        // Check if the click target is NOT inside hamburger or nav-links
-        if (
-            !hamburger.is(e.target) &&
-            hamburger.has(e.target).length === 0 &&
-            !navLinks.is(e.target) &&
-            navLinks.has(e.target).length === 0
-        ) {
-            navLinks.removeClass('active');
-        }
-    });
+    updateNavigationColor();
+    updateCopyrightColor();
 }
 
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 100) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+// Function to get the root path of the website
+function getBasePath() {
+    const path = window.location.pathname;
+    const directories = path.split('/').filter(Boolean);
+
+    // Remove the filename
+    if (directories.length > 0 && directories[directories.length - 1].includes('.')) {
+        directories.pop();
+    }
+
+    return '../'.repeat(directories.length);
+}
+
+function getDateTime() {
+    const now = new Date();
+
+    const time = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Europe/Amsterdam',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true
+    }).format(now);
+
+    const parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Europe/Amsterdam',
+        timeZoneName: 'longOffset'
+    }).formatToParts(now);
+
+    let offset = parts.find(part => part.type === 'timeZoneName').value;
+
+    offset = offset.replace(':00', '');
+
+    return `${time} ${offset}`;
+}
+
+setInterval(function() {
+    document.getElementById('localTime').textContent = getDateTime();
+}, 1000);
+
+/* ------------------------- Menu -------------------------------------------------- */
+
+function openMainMenu() {
+    document.getElementById('main-menu').hidden = false;
+    $("body").addClass("menu-open");
+
+    updateCopyrightColor();
+}
+
+function closeMainMenu() {
+    document.getElementById('main-menu').hidden = true;
+    $("body").removeClass("menu-open");
+
+    updateCopyrightColor();
+}
+
+/* ------------------------- Load Project Cards -------------------------------------------------- */
+
+function loadProjectCards() {
+    const projectList = $('.project-list');
+
+    if (!projectList.length) return;
+
+    // Check if project list is set to featured only
+    const featuredOnly = projectList.data('featured') === true;
+    const basePath = getBasePath();
+
+    // Set amount of projects per pagination
+    const projectsPerPage = getProjectsPerPage();
+    let currentPage = 1;
+
+    $.getJSON(`${basePath}json/projects.json`, function (data) {
+        let projects = data.projects;
+
+        if (featuredOnly) {
+            projects = projects.filter(function (project) {
+                return project.featured;
+            });
+        }
+
+        function displayProjects() {
+            projectList.empty();
+
+            const start = (currentPage - 1) * projectsPerPage;
+            const end = start + projectsPerPage;
+
+            const projectsToDisplay = projects.slice(start, end);
+
+            projectsToDisplay.forEach(function (project) {
+                projectList.append(createProjectCard(project, basePath));
+            });
+        }
+
+        function createPagination() {
+            const pagination = $('#project-pagination');
+
+            if (!pagination.length) return;
+
+            pagination.empty();
+
+            const totalPages = Math.ceil(
+                projects.length / projectsPerPage
+            );
+
+            if (totalPages < 2) return;
+
+            for (let page = 1; page <= totalPages; page++) {
+                const button = $(`
+                    <button type="button">
+                        ${page}
+                    </button>
+                `);
+
+                if (page === currentPage) {
+                    button.addClass('selected');
+                }
+
+                button.on('click', function () {
+                    currentPage = page;
+
+                    displayProjects();
+                    createPagination();
+
+                    // TODO: On the main page this scrolls all the way up to the top (hero)
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+
+                pagination.append(button);
+            }
+        }
+
+        displayProjects();
+        createPagination();
+    });
+} 
+
+function createProjectCard(project, basePath) {
+    const imagePath = `${basePath}${project.thumbnail}`;
+
+    return `
+        <article class="project-card">
+            <a href="${project.link}" class="project-card-link">
+                <img src="${imagePath}" alt="${project.title}">
+
+                <div class="project-card-content">
+                    <header class="project-card-header">
+                        <h3>${project.title}</h3>
+
+                        <div class="project-card-tags">
+                            ${createProjectTags(project.tags)}
+                        </div>
+                    </header>
+
+                    <p>${project.shortDescription}</p>
+                </div>
+            </a>
+        </article>
+    `;
+}
+
+function createProjectTags(tags) {
+    return tags.map(function (tag) {
+        return `<mark class='tag-mark'>${tag}</mark>`;
+    }).join('');
+}
+
+const BREAKPOINTS = {
+    mobile: 768,
+    desktop: 1024
+}
+
+function getProjectsPerPage() {
+    switch (getScreenSize()) {
+        case 'mobile':
+            return 5;
+
+        case 'tablet':
+            return 8;
+
+        case 'desktop':
+            return 12;
+    }
+}
+
+function getScreenSize() {
+    const width = window.innerWidth;
+
+    if (width < BREAKPOINTS.mobile) {
+        return 'mobile';
+    }
+
+    if (width < BREAKPOINTS.desktop) {
+        return 'tablet';
+    }
+
+    return 'desktop';
+}
+
+let currentScreenSize = getScreenSize();
+
+$(window).on('resize', function () {
+    const newScreenSize = getScreenSize();
+
+    if (newScreenSize !== currentScreenSize) {
+        currentScreenSize = newScreenSize;
+
+        currentPage = 1;
+
+        //TODO: right now this gives errors
+        // THis code is necessary when the window gets resized
+        // displayProjects(currentPage);
+        // createPagination();
     }
 });
 
-function experienceCardClicked(event) {
-    event.preventDefault();
+/* ------------------------- Load Project Page -------------------------------------------------- */
 
-    let card = $(event.currentTarget).parent();
-    let cardContent = card.find('.card-content');
-    let cardTitle = card.find('.card-title');
+function loadProjectPage() {
+    const projectId = $('main').data('project-id');
+    const basePath = getBasePath();
 
-    // cardContent.stop(true, true).fadeToggle('fast', function() {
-    //     if (cardContent.hasClass('hidden')) {
-    //         cardContent.removeClass('hidden');
-    //     }
-    // });
+    if (!projectId) return;
 
-    cardContent.toggleClass('hidden');
-    cardTitle.toggleClass('card-active');
+    $.getJSON(`${basePath}json/projects.json`, function (data) {
+        const project = data.projects.find(function (project) {
+            return project.id === projectId;
+        });
+
+        if (!project) return;
+
+        fillProjectInfo(project);
+    });
 }
 
-let currentlyActiveCard = null;
+// Fill the project page
+function fillProjectInfo(project){
+    const basePath = getBasePath();
+    
+    $('#project-title').text(project.title);
+    $('#project-year').text(project.year);
 
-//TODO: Selected portfolio card should change color
-function projectCardClicked(event) {
-    event.preventDefault();
+    $('#project-thumbnail').attr('src', basePath + project.thumbnail);
 
-    const isMobile = window.innerWidth <= 1200; // mobile breakpoint
-
-    const clickedCard = event.currentTarget;
-    const templateId = clickedCard.getAttribute('data-template');
-    const template = document.getElementById(templateId);
-
-    let currentInfo;
-    if (isMobile) {
-        // Mobile: get the project-info inside the same wrapper
-        const wrapper = clickedCard.closest('.project-wrapper');
-        currentInfo = wrapper.querySelector('.project-info-mobile');
-    }
-    else {
-        // Desktop: get the shared project-info container inside the row
-        const currentRow = clickedCard.closest('.project-row');
-        currentInfo = currentRow.querySelector('.project-info-desktop');
-    }
-
-    if (!template || !currentInfo) return;
-
-    const isVisible = !currentInfo.classList.contains('hidden');
-
-    // Close all other open cards
-    if (isMobile) {
-        document.querySelectorAll('.project-info-mobile:not(.hidden)').forEach(info => {
-            if (info !== currentInfo) {
-                $(info).fadeOut('fast', function () {
-                    info.innerHTML = '';
-                    info.classList.add('hidden');
-                });
-            }
-        });
-    }
-    else {
-        document.querySelectorAll('.project-info-desktop:not(.hidden)').forEach(info => {
-            if (info !== currentInfo) {
-                $(info).fadeOut('fast', function () {
-                    info.innerHTML = '';
-                    info.classList.add('hidden');
-                });
-            }
-        });
-    }
-
-    // Toggle off if same card clicked again
-    if (isVisible && clickedCard === currentlyActiveCard) {
-        $(currentInfo).fadeOut('fast', function () {
-            currentInfo.innerHTML = '';
-            currentInfo.classList.add('hidden');
-            currentlyActiveCard = null;
-        });
-        return;
-    }
-
-    // Show new card content
-    currentInfo.innerHTML = '';
-    currentInfo.appendChild(template.content.cloneNode(true));
-    $(currentInfo).hide().removeClass('hidden').fadeIn('fast');
-    currentlyActiveCard = clickedCard;
-}
-
-function formHandler(event) {
-    event.preventDefault();
-
-    // const name = form.elements.name.value;
-    // const email = form.elements.email.value;
-    // const subject = form.elements.subject.value;
-    // const message = form.elements.message.value;
-
-    // console.log(name + ": " + message);
-
-    $('.send-button').text("Message Sent!");
-
-    setTimeout(() => {
-        form.reset();
-        $('.send-button').text("Send");
-    }, 2000);
+    $('.project-tags').html(
+        createProjectTags(project.tags)
+    );
 }
