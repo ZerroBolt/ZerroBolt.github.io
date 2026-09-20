@@ -14,6 +14,12 @@ function loadComponents() {
         
         setNavigationLinks();
         setActiveNavigation();
+
+        if (window.location.pathname.includes('/projects/')) {
+            $('#back-button-wrapper').show();
+        } else {
+            $('#back-button-wrapper').hide();
+        }
     });
     $('#main-footer').load(`${basePath}components/footer.html`);
 }
