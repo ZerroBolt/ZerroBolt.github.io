@@ -930,6 +930,12 @@ footer h6 {
   font-weight: var(--font-weight-semibold);
 }
 
+.project-details-head h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: var(--font-weight-semibold);
+  margin-top: 2.5rem;
+}
+
 .project-details-body {
   width: 100%;
 }
