@@ -148,8 +148,8 @@
                 "Design"
             ],
 
-            "thumbnail": "imgs/projects/moviePoster/movie_poster.png",
-            "link": "projects/moviePoster.html",
+            "thumbnail": "projects/moviePoster/imgs/movie_poster.png",
+            "link": "projects/moviePoster/moviePoster.html",
 
             "role": "Designer",
             
