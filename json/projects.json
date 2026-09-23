@@ -122,8 +122,8 @@
                 "Horror"
             ],
 
-            "thumbnail": "imgs/projects/soundDesign/thumbnail.jpg",
-            "link": "projects/trailerSoundDesign.html",
+            "thumbnail": "projects/trailerSoundDesign/imgs/thumbnail.jpg",
+            "link": "projects/trailerSoundDesign/trailerSoundDesign.html",
 
             "role": "Designer",
             
