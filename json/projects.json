@@ -171,17 +171,19 @@
 
             "tags": [
                 "3D Model",
-                "Design"
+                "Design",
+                "Autodesk Maya",
+                "Adobe Substance 3D Painter"
             ],
 
-            "thumbnail": "imgs/projects/treeHouse/thumbnail.png",
-            "link": "projects/treeHouseModel.html",
+            "thumbnail": "projects/treeHouse/imgs/thumbnail.png",
+            "link": "projects/treeHouse/treeHouseModel.html",
 
             "role": "Designer",
             
             "software": [
                 "Autodesk Maya",
-                "Substance 3D Painter"
+                "Adobe Substance 3D Painter"
             ]
         }
 
