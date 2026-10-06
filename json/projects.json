@@ -6,6 +6,8 @@
             "featured": true,
             "isHidden": false,
 
+            "projectState": "completed",
+
             "title": "Monster Project",
             "year": "2025",
             "month": "6",
@@ -33,6 +35,8 @@
             "id": "energybuddy",
             "featured": true,
             "isHidden": false,
+
+            "projectState": "completed",
 
             "title": "Energybuddy",
             "year": "2025",
@@ -86,6 +90,8 @@
             "featured": false,
             "isHidden": false,
 
+            "projectState": "completed",
+
             "title": "Redesign MyAnimeList",
             "year": "2023",
             "month": "xx",
@@ -113,6 +119,8 @@
             "id": "trailerSoundDesign",
             "featured": false,
             "isHidden": false,
+
+            "projectState": "completed",
 
             "title": "Sound Design Horror Trailer",
             "year": "2024",
@@ -142,6 +150,8 @@
             "featured": false,
             "isHidden": false,
 
+            "projectState": "completed",
+
             "title": "Movie Poster",
             "year": "2023",
             "month": "xx",
@@ -168,6 +178,8 @@
             "id": "treeHouseModel",
             "featured": false,
             "isHidden": false,
+
+            "projectState": "completed",
 
             "title": "3D Model Of A Tree House",
             "year": "2024",

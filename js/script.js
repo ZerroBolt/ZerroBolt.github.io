@@ -1,3 +1,18 @@
+const PROJECT_STATES = {
+    completed: {
+        label: "Completed",
+        className: "completed"
+    },
+    inProgress: {
+        label: "In progress",
+        className: "in-progress"
+    },
+    archived: {
+        label: "Archived",
+        className: "archived"
+    }
+};
+
 /* ------------------------- General -------------------------------------------------- */
 function documentReady(projectPage = false) {
     
@@ -151,11 +166,24 @@ function createProjectCard(project, basePath) {
     if (project.isHidden) return;
 
     const imagePath = `${basePath}${project.thumbnail}`;
+    const state = PROJECT_STATES[project.projectState];
+
+    let stateElement = "";
+
+    if (state != null) {
+        stateElement = `
+            <div class="project-card-state ${state.className}">
+                <p>${state.label}</p>
+            </div>
+        `
+    }
 
     return `
         <article class="project-card">
             <a href="${project.link}" class="project-card-link">
                 <img src="${imagePath}" alt="${project.title}">
+
+                ${stateElement}
 
                 <div class="project-card-content">
                     <header class="project-card-header">
@@ -172,6 +200,7 @@ function createProjectCard(project, basePath) {
         </article>
     `;
 }
+
 
 function createProjectTags(tags) {
     return tags.map(function (tag) {
