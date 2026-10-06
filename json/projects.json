@@ -4,6 +4,7 @@
         {
             "id": "monsterProject",
             "featured": true,
+            "isHidden": false,
 
             "title": "Monster Project",
             "year": "2025",
@@ -31,6 +32,7 @@
         {
             "id": "energybuddy",
             "featured": true,
+            "isHidden": false,
 
             "title": "Energybuddy",
             "year": "2025",
@@ -58,6 +60,7 @@
         {
             "id": "languageSchoolJapan",
             "featured": true,
+            "isHidden": false,
 
             "title": "EF Japan",
             "year": "2026",
@@ -81,6 +84,7 @@
         {
             "id": "malRedesign",
             "featured": false,
+            "isHidden": false,
 
             "title": "Redesign MyAnimeList",
             "year": "2023",
@@ -108,6 +112,7 @@
         {
             "id": "trailerSoundDesign",
             "featured": false,
+            "isHidden": false,
 
             "title": "Sound Design Horror Trailer",
             "year": "2024",
@@ -135,6 +140,7 @@
         {
             "id": "moviePoster",
             "featured": false,
+            "isHidden": false,
 
             "title": "Movie Poster",
             "year": "2023",
@@ -161,6 +167,7 @@
         {
             "id": "treeHouseModel",
             "featured": false,
+            "isHidden": false,
 
             "title": "3D Model Of A Tree House",
             "year": "2024",

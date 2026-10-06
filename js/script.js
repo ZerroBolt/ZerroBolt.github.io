@@ -148,6 +148,8 @@ function loadProjectCards() {
 } 
 
 function createProjectCard(project, basePath) {
+    if (project.isHidden) return;
+
     const imagePath = `${basePath}${project.thumbnail}`;
 
     return `
