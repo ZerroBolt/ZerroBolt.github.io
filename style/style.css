@@ -557,6 +557,16 @@ color: var(--color-text-light);
   gap: 15px;
 }
 
+.timeline-item a {
+  font-size: 18px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+}
+
+.timeline-item a:hover {
+  color: var(--color-accent-dark);
+}
+
 @media (min-width: 768px) {
   .timeline-item {
     gap: 30px;
