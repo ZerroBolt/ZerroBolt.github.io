@@ -2,7 +2,10 @@
 function documentReady(projectPage = false) {
     
     // based on the page load the correct project view
-    if (projectPage) loadProjectPage();
+    if (projectPage) {
+        loadProjectPage();
+        loadLightBox();
+    }
     else loadProjectCards();
 
     updateNavigationColor();
@@ -260,3 +263,112 @@ function fillProjectInfo(project){
         createProjectTags(project.tags)
     );
 }
+
+
+
+// ---------------------------------------------- Lightbox -----------------------------------------
+
+function loadLightBox(){
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = lightbox.querySelector(".lightbox-image");
+    const lightboxBackdrop = lightbox.querySelector(".lightbox-backdrop");
+    const lightboxClose = lightbox.querySelector(".lightbox-close");
+
+    let currentImage = null;
+
+    document.querySelectorAll(".project-gallery img").forEach(img => {
+        img.addEventListener("click", () => {
+            openLightbox(img);
+        });
+    });
+
+    function openLightbox(img) {
+    currentImage = img;
+
+    const rect = img.getBoundingClientRect();
+
+    // Set image
+    lightboxImage.src = img.src;
+    lightboxImage.alt = img.alt;
+
+    // Start position = exact position of thumbnail
+    lightboxImage.style.left = `${rect.left}px`;
+    lightboxImage.style.top = `${rect.top}px`;
+    lightboxImage.style.width = `${rect.width}px`;
+    lightboxImage.style.height = `${rect.height}px`;
+
+    // Make it visible
+    lightboxImage.style.opacity = "1";
+
+    lightbox.classList.add("open");
+
+    // Force browser to register starting position
+    lightboxImage.offsetHeight;
+
+    // Calculate final size
+    const imageRatio = img.naturalWidth / img.naturalHeight;
+
+    const maxWidth = window.innerWidth * 0.9;
+    const maxHeight = window.innerHeight * 0.9;
+
+    let finalWidth = maxWidth;
+    let finalHeight = finalWidth / imageRatio;
+
+    if (finalHeight > maxHeight) {
+        finalHeight = maxHeight;
+        finalWidth = finalHeight * imageRatio;
+    }
+
+    const finalLeft = (window.innerWidth - finalWidth) / 2;
+    const finalTop = (window.innerHeight - finalHeight) / 2;
+
+    // Animate to final position
+    requestAnimationFrame(() => {
+        lightboxImage.style.left = `${finalLeft}px`;
+        lightboxImage.style.top = `${finalTop}px`;
+        lightboxImage.style.width = `${finalWidth}px`;
+        lightboxImage.style.height = `${finalHeight}px`;
+    });
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeLightbox() {
+    if (!currentImage) return;
+
+    const rect = currentImage.getBoundingClientRect();
+
+    // Animate back to original position
+    lightboxImage.style.left = `${rect.left}px`;
+    lightboxImage.style.top = `${rect.top}px`;
+    lightboxImage.style.width = `${rect.width}px`;
+    lightboxImage.style.height = `${rect.height}px`;
+
+    lightbox.classList.remove("open");
+
+    setTimeout(() => {
+        lightboxImage.style.opacity = "0";
+        lightboxImage.src = "";
+        currentImage = null;
+    }, 450);
+
+    document.body.style.overflow = "";
+}
+
+
+lightboxBackdrop.addEventListener("click", closeLightbox);
+lightboxClose.addEventListener("click", closeLightbox);
+lightboxImage.addEventListener("click", closeLightbox);
+
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && currentImage) {
+        closeLightbox();
+    }
+});
+}
+
+
+
+
