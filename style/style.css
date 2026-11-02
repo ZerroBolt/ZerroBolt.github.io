@@ -666,6 +666,10 @@ color: var(--color-text-light);
   padding-top: 50px !important;
 }
 
+.projects-page .content-wrapper {
+  padding-bottom: 180px;
+}
+
 .project-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -957,7 +961,6 @@ footer h6 {
 .project-details-content h2 {
   font-size: clamp(28px, 3.5vw, 40px);
   font-weight: var(--font-weight-semibold);
-  margin-top: 2.5rem;
 }
 
 .project-details-content-inner {
@@ -992,7 +995,12 @@ footer h6 {
   gap: 5px;
 
   width: 100%;
-  justify-content: center;
+  /* justify-content: center; */
+}
+
+.project-tags .tag-mark {
+  background-color: #455CE930;
+  color: var(--color-accent);
 }
 
 
@@ -1012,6 +1020,11 @@ footer h6 {
 
 .project-details-body {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 2.5em;
+  padding-top: 1.5em;
 }
 
 .project-details-body figure img {
