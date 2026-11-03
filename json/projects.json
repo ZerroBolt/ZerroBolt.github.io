@@ -7,9 +7,14 @@
             "isHidden": false,
 
             "title": "Monster Project",
-            "year": "2025",
-            "month": "6",
-            "day": "30",
+            "startDate": {
+                "year": "2025",
+                "month": "5"
+            },
+            "endDate": {
+                "year": "2025",
+                "month": "7"
+            },
 
             "shortDescription": "This was the last project of my second year. We had to make a \"short\" game in which the drawn monsters came to life.",
 
@@ -26,6 +31,37 @@
             "software": [
                 "Figma",
                 "Unity"
+            ],
+
+            "credit": [
+                {
+                    "name": "Tycho Kerkhofs",
+                    "role": "Designer"
+                },
+                {
+                    "name": "Arthur Stam",
+                    "role": "Designer"
+                },
+                {
+                    "name": "Allard Mulder",
+                    "role": "Designer"
+                },
+                {
+                    "name": "Zuzana Stofova",
+                    "role": "Artist"
+                },
+                {
+                    "name": "Johnny van der Rest",
+                    "role": "Artist"
+                },
+                {
+                    "name": "Joris Kalk",
+                    "role": "Engineer"
+                },
+                {
+                    "name": "Sen van Ulden",
+                    "role": "Engineer"
+                }
             ]
         },
 

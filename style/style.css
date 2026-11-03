@@ -1018,6 +1018,18 @@ footer h6 {
   font-weight: var(--font-weight-semibold);
 }
 
+.project-timeframe-info {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.project-timeframe-info p {
+  font-family: var(--font-barlow-semi-condensed);
+  color: var(--color-text-grey);
+  /* color: var(--color-accent); */
+}
+
 .project-details-body {
   width: 100%;
   display: flex;

@@ -250,13 +250,43 @@ function loadProjectPage() {
 // Fill the project page
 function fillProjectInfo(project){
     const basePath = getBasePath();
-    
-    $('#project-title').text(project.title);
-    $('#project-year').text(project.year);
 
+    // Project Timeframe
+    const startDate = formatDate(project.startDate);
+
+    const projectDate = project.endDate
+    ? `${startDate} - ${formatDate(project.endDate)}`
+    : `${startDate} - Present`;
+
+    $('#project-timeframe').text(projectDate);
+    
+    // Project credits
+    const creditsContainer = document.querySelector(".project-credits");
+
+    if (creditsContainer != null) {
+        project.credit.forEach(person => {
+            const credit = document.createElement("p");
+
+            credit.textContent = `${person.name} - ${person.role}`;
+
+            creditsContainer.appendChild(credit);
+        });
+    }
+
+    // Other project information
+    $('#project-title').text(project.title);
     $('#project-thumbnail').attr('src', basePath + project.thumbnail);
 
     $('.project-tags').html(
         createProjectTags(project.tags)
     );
+}
+
+function formatDate(date) {
+    if (date != null) {
+        return new Intl.DateTimeFormat("en-GB", {
+        month: "long",
+        year: "numeric"
+        }).format(new Date(date.year, date.month - 1));
+    }
 }
